@@ -32,6 +32,10 @@ Hey, that's awesome! I am sorry you're stuck with my mediocre code. Below is an 
 
 Awesome, a little bit easier but still requires the above setup. In place of actually changing visual components, you're going to change the data or variables in the `src/resources/data.ts` file. Otherwise, follow the above directions. 
 
+## Words, how do I add words?
+
+Well uh, I had not gotten this far. I'd recommend storing the text in variables similar to the way it is done for the graphs. Then dropping it directly into some styled `<div>` in `App.tsx`. You can also break it out further or built a react component to reuse if there is something you want for each text block etc. 
+
 ---
 his project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
