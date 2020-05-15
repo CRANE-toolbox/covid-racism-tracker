@@ -1,0 +1,15 @@
+service:
+    name: cobra-web
+  provider:
+    name: cloudflare
+  config:
+    accountId: ${env:CLOUDFLARE_ACCOUNT_ID}
+    zoneId: ${env:CLOUDFLARE_ZONE_ID}
+    
+  plugins:
+    - serverless-cloudflare-workers
+    
+  functions:
+    deploy-from-travis:
+      name: travis-deployed-worker
+      script: worker

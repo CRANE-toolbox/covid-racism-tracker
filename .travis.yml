@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "node"
+  
+deploy:
+  - provider: script
+  script: sls deploy
+  skip_cleanup: true
+  on:
+    branch: master

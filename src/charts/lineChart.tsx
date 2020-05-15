@@ -7,12 +7,19 @@ import React from 'react'
 // you'll often use just a few of them.
 interface props {
     data: Serie[]
+    marginSides?: number
+    marginTopBottom?: number
 }
 
-export const BasicChart = (props: {data: Serie[]}) => (
+export const BasicChart = (props: props) => (
     <ResponsiveLine
         data={props.data}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        margin={{
+            top: props.marginTopBottom || 40,
+            right: props.marginSides || 50,
+            bottom: props.marginTopBottom || 40,
+            left: props.marginSides || 50
+        }}
         xScale={{
             type: 'time',
             format: '%Y-%m-%d',
@@ -24,7 +31,7 @@ export const BasicChart = (props: {data: Serie[]}) => (
             stacked: false,
         }}
         axisLeft={{
-            legend: 'linear scale',
+            legend: 'count',
             legendOffset: 12,
         }}
         axisBottom={{

@@ -1,6 +1,5 @@
 
-import React from 'react'
-import { NivoContainer } from './NivoTools';
+import React from 'react
 interface props {
     chart: React.ReactNode
     label?: string
@@ -9,10 +8,21 @@ interface props {
 }
 
 export const ChartWithTitle = (props: props) => {
+
+    const divStyle = {
+        fontSize: 20,
+        marginBottom: -20
+    };
+
+
     return (
-        <div style={{ height: props.height, width: props.width }}>
-            <p>{props.label}</p>
-            {props.chart}
+        <div>
+            <div className="container" style={divStyle}>
+                <h3>{props.label}</h3>
+            </div>
+            <div style={{ height: props.height, width: props.width}}>
+                {props.chart}
+            </div>
         </div>
     )
 
