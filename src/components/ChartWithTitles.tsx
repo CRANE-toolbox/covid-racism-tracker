@@ -1,6 +1,5 @@
 
-import React from 'react'
-import { NivoContainer } from './NivoTools';
+import React from 'react
 interface props {
     chart: React.ReactNode
     label?: string
@@ -14,10 +13,6 @@ export const ChartWithTitle = (props: props) => {
         fontSize: 20,
         marginBottom: -20
     };
-
-    const chartStyle = {
-        padding: "20px"
-    }
 
 
     return (
