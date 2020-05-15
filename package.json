@@ -21,6 +21,8 @@
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "serverless": "^1.70.1",
+    "serverless-cloudflare-workers": "^1.2.0",
     "typescript": "^3.7.5"
   },
   "scripts": {

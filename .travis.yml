@@ -1,17 +1,10 @@
-
----
-    language: node_js
-    node_js:
-      - node
-      - lts/*
-    cache:
-      directories:
-        - ~/.npm
-    before_install:
-      - cd cobra-web
-    before_script:
-      - npm install -g npm@latest
-    script:
-      - npm run build
-    after_script:
-      - npm run site
+language: node_js
+node_js:
+  - "node"
+  
+deploy:
+  - provider: script
+  script: sls deploy
+  skip_cleanup: true
+  on:
+    branch: master
