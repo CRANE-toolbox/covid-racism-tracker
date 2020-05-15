@@ -45,8 +45,12 @@ section{
 
 .about{
   background-color: #282c34;
-  padding: 20px 50px 25px 50px;
+  padding: 15px 50px 10px 50px;
   color: white;
+}
+
+.subheader{
+  font-style: italic;
 }
 
 .column {

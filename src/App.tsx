@@ -15,16 +15,11 @@ function App() {
       <section>
         {/* <h2>Tweet Topics Relating to China, Chinese, Kungflu, and Wuflu</h2> */}
         <ChartWithTitle chart={<BasicChart data={dataAll} />} label="Evolution of the share of sinophobic and anti-black hate speech among Covid19-related tweets in March and April" />
-        <div className="row">
-          <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataAll} />} label="Topics appearing linked to China/Chinese/Kungflu/Wuflu keywords among Covid19-related tweets in March and April" />
-          </div>
-        </div>
       </section>
 
       <section>
-        <h2>Tweet Topics Relating to China & Chinese</h2>
-        <ChartWithTitle chart={<BasicChart data={dataChinaChinese} />} label="Incidents over period of time" />
+        <h2>Evolution of Sinophobic and Anti-Black Hate Spepch</h2>
+        <h3>Topics appearing linked to China/Chinese keywords among Covid19-related tweets in March and April 2020</h3>
         <div className="row">
           <div className="column">
             <ChartWithTitle chart={<CustomResponsiveBump data={dataChinaChinese} />} label="More interactive content" />
@@ -33,8 +28,7 @@ function App() {
       </section>
 
       <section>
-        <h2>Tweet Topics Relating to Kungflu & Wuflu</h2>
-        <ChartWithTitle chart={<BasicChart data={dataKungfluWuflu} />} label="Incidents over period of time" />
+        <h2>Topics appearing linked to Kungflu/Wuflu keywords among Covid19-related tweets in March and April 2020</h2>
         <div className="row">
           <div className="column">
             <ChartWithTitle chart={<CustomResponsiveBump data={dataKungfluWuflu} />} label="Interactive Area Bump Map" />
@@ -42,16 +36,28 @@ function App() {
         </div>
       </section>
 
-
-      <header className="about">
+      <div className="about">
         <h2>About Project Cobra</h2>
         <p>Project Cobra is monitoring real time racist rhetoric on Twitter. There is evidence that online hate speech
         predicts hate crime and human rights groups have argued that exposure to online hate speech normalises such hatred
         for majority groups. We are hoping that tracking the changes in online sinophobic and racist rhetoric resulting from
         the progress of the Covid19 pandemic allows for hard exposure to those uninformed, as well as turn into a tool for
         change within victims and supporting organizations.</p>
-      </header>
+      </div>
 
+      <div className="about">
+        <h2>What is Sinophobia?</h2>
+        <p>In 2013, Pew Research Center from the United States conducted a survey over Sinophobia, finding that China was viewed
+        favorably in just half (19 of 38) of the nations surveyed, excluding China itself. Sinophobia is defined as the consistent
+        hostility toward people of Chinese origin or toward Chinese culture, people, history, or government. It is also said to
+        include the fear or dislike of Chinese-made goods</p>
+        <h2 className="subheader">Sinophobia to Racism to Present Stage:</h2>
+        <p>Sinophobia and anti-asian speech have always been actively present, as well as other racist speech within social media.
+        The COVID-19 not only exposed this hate, but allowed many of us to witness it as we are more than ever stuck in our
+        phones. And more than ever, these racist attackers are on their phones as well spreading their words. Racist rhetoric affects
+        everyone, from the “normalization” of racist slurs to the immense and disproportionate death rate in black and brown
+        communities. Racism is causing more lives in this pandemic, we must expose this data, and urge for change.</p>
+      </div>
 
 
     </div>
