@@ -1,5 +1,5 @@
 
-import React from 'react
+import React from 'react'
 interface props {
     chart: React.ReactNode
     label?: string
@@ -11,7 +11,9 @@ export const ChartWithTitle = (props: props) => {
 
     const divStyle = {
         fontSize: 20,
-        marginBottom: -20
+        marginBottom: -20,
+        marginLeft: "5%",
+        marginRight: "5%"
     };
 
 
