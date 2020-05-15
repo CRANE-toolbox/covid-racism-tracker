@@ -40,17 +40,31 @@
 }
 
 section{
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .about{
-  background-color: #282c34;
-  padding: 15px 50px 10px 50px;
   color: white;
+  padding-bottom: 8px;
 }
 
-.subheader{
+#main-img{
+  width: 800px;
+  height: auto;
+  max-width: 100%;
+  padding: 15px;
+  margin: auto;
+}
+
+.description {
+  background-color: #282c34;
+  padding: 15px 50px 10px 50px;
+}
+
+.subheader {
   font-style: italic;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .column {
