@@ -15,13 +15,19 @@ export const ChartWithTitle = (props: props) => {
         marginBottom: -20
     };
 
+    const chartStyle = {
+        padding: "20px"
+    }
+
 
     return (
-        <div style={{ height: props.height, width: props.width }}>
-          <div className="container" style={divStyle}>
-            <p>{props.label}</p>
-          </div>
-            {props.chart}
+        <div>
+            <div className="container" style={divStyle}>
+                <h3>{props.label}</h3>
+            </div>
+            <div style={{ height: props.height, width: props.width}}>
+                {props.chart}
+            </div>
         </div>
     )
 

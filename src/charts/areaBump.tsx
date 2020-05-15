@@ -1,4 +1,4 @@
-import { ResponsiveAreaBump, AreaBumpInputSerie  } from '@nivo/bump'
+import { ResponsiveAreaBump, AreaBumpInputSerie } from '@nivo/bump'
 import React from 'react';
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
@@ -7,12 +7,20 @@ import React from 'react';
 // you'll often use just a few of them.
 interface props {
     data: AreaBumpInputSerie[]
+    marginSides?: number
+    marginTopBottom?: number
 
 }
 export const CustomResponsiveBump = (props: props) => (
     <ResponsiveAreaBump
         data={props.data}
-        margin={{ top: 40, right: 100, bottom: 40, left: 100 }}
+        // Change the margin here for the charts, doing so in the divs does not place nicely.
+        margin={{
+            top: props.marginTopBottom || 40,
+            right: props.marginSides || 200,
+            bottom: props.marginTopBottom || 40,
+            left: props.marginSides || 200
+        }}
         spacing={8}
         colors={{ scheme: 'nivo' }}
         blendMode="multiply"

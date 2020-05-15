@@ -13,14 +13,11 @@ function App() {
       </header>
 
       <section>
-        <h2>Tweet Topics Relating to China, Chinese, Kungflu, and Wuflu</h2>
-        <ChartWithTitle chart={<BasicChart data={dataAll} />} label="Incidents over period of time" />
+        {/* <h2>Tweet Topics Relating to China, Chinese, Kungflu, and Wuflu</h2> */}
+        <ChartWithTitle chart={<BasicChart data={dataAll} />} label="Evolution of the share of sinophobic and anti-black hate speech among Covid19-related tweets in March and April" />
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataAll} />} label="Some interactive content" />
-          </div>
-          <div className="column">
-            <p>Some big ass text</p>
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataAll} />} label="Topics appearing linked to China/Chinese/Kungflu/Wuflu keywords among Covid19-related tweets in March and April" />
           </div>
         </div>
       </section>
@@ -32,9 +29,6 @@ function App() {
           <div className="column">
             <ChartWithTitle chart={<CustomResponsiveBump data={dataChinaChinese} />} label="More interactive content" />
           </div>
-          <div className="column">
-            <p>Some big ass text</p>
-          </div>
         </div>
       </section>
 
@@ -44,9 +38,6 @@ function App() {
         <div className="row">
           <div className="column">
             <ChartWithTitle chart={<CustomResponsiveBump data={dataKungfluWuflu} />} label="Interactive Area Bump Map" />
-          </div>
-          <div className="column">
-            <p>Some big ass text</p>
           </div>
         </div>
       </section>
