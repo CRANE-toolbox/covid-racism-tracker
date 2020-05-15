@@ -39,6 +39,15 @@
   }
 }
 
+section{
+  margin-bottom: 50px;
+}
+
+.about{
+  background-color: #282c34;
+  padding: 20px 50px 25px 50px;
+  color: white;
+}
 
 .column {
   display: flex;
