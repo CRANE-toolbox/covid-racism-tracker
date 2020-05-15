@@ -12,9 +12,7 @@
   justify-content: center;
   font-size: calc(15px + 2vmin);
   color: white;
-
 }
-
 
 .App-subtitle {
   background-color: #282c34;
@@ -54,6 +52,10 @@ section{
   max-width: 100%;
   padding: 15px;
   margin: auto;
+}
+
+#all-graphs-title{
+  font-size: 30px;
 }
 
 .description {
