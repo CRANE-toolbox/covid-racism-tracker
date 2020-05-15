@@ -9,9 +9,18 @@ interface props {
 }
 
 export const ChartWithTitle = (props: props) => {
+
+    const divStyle = {
+        fontSize: 20,
+        marginBottom: -20
+    };
+
+
     return (
         <div style={{ height: props.height, width: props.width }}>
+          <div className="container" style={divStyle}>
             <p>{props.label}</p>
+          </div>
             {props.chart}
         </div>
     )
