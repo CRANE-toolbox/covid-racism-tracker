@@ -22,10 +22,10 @@ export const BasicChart = (props: props) => (
         }}
         xScale={{
             type: 'time',
-            format: '%Y-%m-%d',
+            format: '%d-%b-%Y',
             precision: 'day',
         }}
-        xFormat="time:%Y-%m-%d"
+        xFormat="time:'%d-%b-%Y'"
         yScale={{
             type: 'linear',
             stacked: false,
@@ -36,13 +36,13 @@ export const BasicChart = (props: props) => (
         }}
         axisBottom={{
             format: '%b %d',
-            tickValues: 'every 2 days',
+            tickValues: 'every 5 days',
             legend: 'time scale',
             legendOffset: -12,
         }}
         curve="monotoneX"
-        enablePointLabel={true}
-        pointSize={16}
+        enablePointLabel={false}
+        pointSize={8}
         pointBorderWidth={1}
         pointBorderColor={{
             from: 'color',
@@ -50,5 +50,30 @@ export const BasicChart = (props: props) => (
         }}
         useMesh={true}
         enableSlices={false}
+        legends={[
+            {
+                anchor: 'top-left',
+                direction: 'column',
+                justify: false,
+                translateX: 0,
+                translateY: 0,
+                itemWidth: 100,
+                itemHeight: 20,
+                itemsSpacing: 20,
+                symbolSize: 20,
+                symbolShape: 'circle',
+                itemDirection: 'left-to-right',
+                itemTextColor: '#777',
+                effects: [
+                    {
+                        on: 'hover',
+                        style: {
+                            itemBackground: 'rgba(0, 0, 0, .03)',
+                            itemOpacity: 1
+                        }
+                    }
+                ]
+            }
+        ]}
     />
 )
