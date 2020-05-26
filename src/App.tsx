@@ -14,7 +14,7 @@ function App() {
         <p className="App-subtitle">Tracking racism around COVID-19 on Twitter</p>
       </header>
 
-      <img src={mainImg} id="main-img" alt="Main CoBRa Image" />
+      <img src={mainImg} id="main-img" alt="Main CoBRa Logo" />
 
       <section>
         <h2 id="all-graphs-title">Evolution of Sinophobic and Anti-Black Hate Speech</h2>

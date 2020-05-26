@@ -10,6 +10,10 @@ jobs:
     name: Deploy
     steps:
       - uses: actions/checkout@v2
+      - name: Build Site
+        run: 'npm install && npm run build'
+        env:
+          CI: false
       - name: Publish
         uses: cloudflare/wrangler-action@1.1.0
         with:
