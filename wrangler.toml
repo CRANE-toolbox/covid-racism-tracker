@@ -3,6 +3,9 @@ type = "webpack"
 account_id = "4038f008d7b90ffaa7e6884dd26cc066"
 workers_dev = true
 
+[env.staging]
+name = "cobra-web-staging"
+
 [site]
 bucket = "./build"
 entry-point = "workers-site"

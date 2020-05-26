@@ -30,7 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "site": "npm run build && wrangler publish"
+    "site": "npm run build && wrangler publish",
+    "staging": "npm run build && wrangler publish --env staging"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -2,6 +2,11 @@
 
 The "main" of this CRA is in App.tsx(even though this actually called on index.tsx you should not touch that one). `App.tsx` can either have a bunch of react components and JSX(like it does right now) or expert one or more react components that then handle the more specific parts of code.
 
+### Deployment
+Deployment happens automatically via Github Actions when a push to master occurs. Changes are compiled then pushed to the hosting provider.
+#### Staging Deployment
+In addition, there is a staging environment available via the following npm script `npm run staging` which pushes changes to `https://cobra-web-staging.iansaucy.workers.dev`. Alternatively changes can be pushed manually via `wrangler publish --env staging`
+
 ### The charts
 in `src/charts` live a few react components, they're basically just wrappers on the `nivo.rocks` library that we're using for data visualization but their goal is to allow easy expansion in the future.
 
@@ -36,51 +41,6 @@ Awesome, a little bit easier but still requires the above setup. In place of act
 
 Well uh, I had not gotten this far. I'd recommend storing the text in variables similar to the way it is done for the graphs. Then dropping it directly into some styled `<div>` in `App.tsx`. You can also break it out further or built a react component to reuse if there is something you want for each text block etc.
 
+
 ---
-his project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm install`
-
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
