@@ -17,8 +17,13 @@ function App() {
       <img src={mainImg} id="main-img" alt="Main CoBRa Logo" />
 
       <section>
+        <h2 id="all-graphs-title">Frequency of sinophobic slurs on Twitter</h2>
+        <ChartWithTitle chart={<BasicChart data={dataSlurs} />} label="Evolution of the frequency of several sinophobic slurs on Twitter from November 2019 to April 2020" />
+      </section>
+
+      <section>
         <h2 id="all-graphs-title">Evolution of Sinophobic and Anti-Black Hate Speech</h2>
-        <ChartWithTitle chart={<BasicChart data={dataAll} />} label="Evolution of the share of sinophobic and anti-black hate speech among COVID-19-related tweets in March and April 2020" />
+        <ChartWithTitle chart={<BasicChart data={dataClassifier} />} label="Evolution of the share of sinophobic hate speech on Twitter from November 2019 to April 2020" />
       </section>
 
       <section>
