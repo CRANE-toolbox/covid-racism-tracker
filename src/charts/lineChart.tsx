@@ -42,7 +42,7 @@ export const BasicChart = (props: props) => (
         }}
         curve="monotoneX"
         enablePointLabel={false}
-        pointSize={8}
+        pointSize={3}
         pointBorderWidth={1}
         pointBorderColor={{
             from: 'color',
@@ -52,15 +52,15 @@ export const BasicChart = (props: props) => (
         enableSlices={false}
         legends={[
             {
-                anchor: 'top-left',
-                direction: 'column',
+                anchor: 'top',
+                direction: 'row',
                 justify: false,
                 translateX: 0,
                 translateY: 0,
                 itemWidth: 100,
                 itemHeight: 20,
                 itemsSpacing: 20,
-                symbolSize: 20,
+                symbolSize: 10,
                 symbolShape: 'circle',
                 itemDirection: 'left-to-right',
                 itemTextColor: '#777',
