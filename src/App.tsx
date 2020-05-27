@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BasicChart } from './charts/lineChart';
-import { dataAll, dataChinaChinese, dataKungfluWuflu } from './resources/data';
+import { dataClassifier, dataSlurs, dataChinaChinese, dataKungfluWuflu } from './resources/data';
 import { ChartWithTitle } from './components/ChartWithTitles'
 import { CustomResponsiveBump } from './charts/areaBump';
 import mainImg from './assets/main-photo.jpg';
