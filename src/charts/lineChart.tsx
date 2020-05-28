@@ -31,12 +31,12 @@ export const BasicChart = (props: props) => (
             stacked: false,
         }}
         axisLeft={{
-            legend: 'count',
+            legend: 'frequency',
             legendOffset: 12,
         }}
         axisBottom={{
             format: '%b %d',
-            tickValues: 'every 5 days',
+            tickValues: 'every 7 days',
             legend: 'time scale',
             legendOffset: -12,
         }}

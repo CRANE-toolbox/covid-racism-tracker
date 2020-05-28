@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BasicChart } from './charts/lineChart';
-import { dataClassifier, dataSlurs, dataChinaChinese, dataKungfluWuflu } from './resources/data';
+import { dataClassifier, dataSlurs, dataSlursByWeek, dataChinaChinese, dataKungfluWuflu } from './resources/data';
 import { ChartWithTitle } from './components/ChartWithTitles'
 import { CustomResponsiveBump } from './charts/areaBump';
 import mainImg from './assets/main-photo.jpg';
@@ -17,8 +17,13 @@ function App() {
       <img src={mainImg} id="main-img" alt="Main CoBRa Logo" />
 
       <section>
-        <h2 id="all-graphs-title">Frequency of sinophobic slurs on Twitter</h2>
+        <h2 id="all-graphs-title">Frequency of sinophobic slurs on Twitter, daily results</h2>
         <ChartWithTitle chart={<BasicChart data={dataSlurs} />} label="Evolution of the frequency of several sinophobic slurs on Twitter from November 2019 to April 2020" />
+      </section>
+
+      <section>
+        <h2 id="all-graphs-title">Frequency of sinophobic slurs on Twitter, weekly results</h2>
+        <ChartWithTitle chart={<BasicChart data={dataSlursByWeek} />} label="Evolution of the frequency of several sinophobic slurs on Twitter from November 2019 to April 2020" />
       </section>
 
       <section>
