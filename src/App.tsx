@@ -17,34 +17,33 @@ function App() {
       <img src={mainImg} id="main-img" alt="Main CoBRa Logo" />
 
       <section>
-        <h2 id="all-graphs-title">Frequency of sinophobic slurs on Twitter, daily results</h2>
-        <ChartWithTitle chart={<BasicChart data={dataSlurs} />} label="Evolution of the frequency of several sinophobic slurs on Twitter from November 2019 to April 2020" />
-      </section>
-
-      <section>
-        <h2 id="all-graphs-title">Frequency of sinophobic slurs on Twitter, weekly results</h2>
-        <ChartWithTitle chart={<BasicChart data={dataSlursByWeek} />} label="Evolution of the frequency of several sinophobic slurs on Twitter from November 2019 to April 2020" />
+        <h2 id="all-graphs-title">Frequency of sinophobic slurs on Twitter</h2>
+        <ChartWithTitle chart={<BasicChart data={dataSlurs} />} label="Daily evolution of the frequency of several sinophobic slurs on Twitter from November 2019 to April 2020" />
+        <ChartWithTitle chart={<BasicChart data={dataSlursByWeek} />} label="Weekly evolution of the frequency of several sinophobic slurs on Twitter from November 2019 to April 2020" />
+        <p>Clear decrease in the use of "chinazi". Slight increase in the use of "chink" and "gook". Two periods with higher use of "chingchong/ching chong/ching-chong", in January and in the second half of March (coincidates with Trump's discourse on the "Chinese virus").</p>
       </section>
 
       <section>
         <h2 id="all-graphs-title">Evolution of Sinophobic and Anti-Black Hate Speech</h2>
         <ChartWithTitle chart={<BasicChart data={dataClassifier} />} label="Evolution of the share of sinophobic hate speech on Twitter from November 2019 to April 2020" />
+        <p>Non-conclusive results, we can't really trust the classifier since we don't have test data.</p>
       </section>
 
       <section>
-        <div className="row">
-          <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataChinaChinese} />} label="Topics appearing linked to China/Chinese keywords among COVID-19-related tweets in March and April 2020" />
-          </div>
-        </div>
-      </section>
+        <h2 id="all-graphs-title">Topics appearing in conjunction to specific keywords</h2>
 
-      <section>
-        <div className="row">
-          <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataKungfluWuflu} />} label="Topics appearing linked to Kungflu/Wuflu keywords among COVID-19-related tweets in March and April 2020" />
-          </div>
-        </div>
+        <p>We have tested several others keywords for which we thought we might see an apparition or increase of anti-asian topics. None of the following keywords (main associated topics in parentheses) appeared frequently in similar context to words denoting sinophobia:</p>
+        <ul>
+          <li>Asian (Nationality or ethnicity, Gender and sexual orientation, Sexual activities)</li>
+          <li>Asia (Names of countries or continents)</li>
+          <li>Country (Names of countries or continents, Politics)</li>
+          <li>Immigrant (Immigration-related, Crime-related, Ethnicity, Socio-economics, Systemic oppression)</li>
+          <li>Immigrants (Immigration-related, Crime-related, Ethnicity, Socio-economics, Systemic oppression)</li>
+          <li>Immigration (Immigration-related, Legislation, Politics)</li>
+          <li>Quarantine (Animals, Medical terms, China-related, Alternative names for covid19, Living in quarantine)</li>
+          <li>Disease (Names of diseases, Description of diseases)</li>
+          <li>Infection (Names of diseases, Description of diseases, Other medical terms)</li>
+        </ul>
       </section>
 
 
