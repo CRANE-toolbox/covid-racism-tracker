@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BasicChart } from './charts/lineChart';
-import { dataClassifier, dataSlurs, dataSlursByWeek, dataChinaChinese, dataKungfluWuflu } from './resources/data';
+import { dataClassifier, dataSlurs, dataSlursByWeek, dataTopicWuflu, dataTopicChina, dataTopicWuhan, dataTopicCovid, dataTopicVirus, dataTopicKungflu, dataTopicChinese, dataTopicCoronavirus, dataTopicInfecting, dataAggregateChinaChineseWuhan, dataAggregateKungFluWuflu } from './resources/data';
 import { ChartWithTitle } from './components/ChartWithTitles'
 import { CustomResponsiveBump } from './charts/areaBump';
 import mainImg from './assets/main-photo.jpg';
@@ -30,7 +30,62 @@ function App() {
       </section>
 
       <section>
+        <h2 id="all-graphs-title">New sinophobic slurs</h2>
+        <p>By looking at words that appear in similar context to common sinophobic slurs (**chink** and **chinaman**), wa have identified two words as potential new sinophobic terms:</p>
+        <ul>
+          <li>**coronachan** could come from the name of the virus and the Japanese suffix -chan for girls</li>
+          <li>**beak** could refer to the exagerated kissing shape one can make with their mouth, that appears to be popular for selfies in some young asian communities (needs checking)</li>
+        </ul>
+      </section>
+
+      <section>
         <h2 id="all-graphs-title">Topics appearing in conjunction to specific keywords</h2>
+        For each keyword, rank and volume of the topics present in the 40 closest words, for each month from November 2019 to April 2020
+        <div className="row">
+          <div className="column">
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicVirus} />} label="Topics appearing linked to **virus** in a random sample of tweets, for each month from November 2019 to April 2020." />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicCovid} />} label="Topics appearing linked to **covid** in a random sample of tweets, for each month from February to April 2020." />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicWuflu} />} label="Topics appearing linked to **wuflu** in a random sample of tweets, for each month from January to April 2020." />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicKungflu} />} label="Topics appearing linked to **kungflu** in a random sample of tweets, for each month from March to April 2020." />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicChina} />} label="Topics appearing linked to **china** in a random sample of tweets, for each month from November 2019 to April 2020." />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicChinese} />} label="Topics appearing linked to **chinese** in a random sample of tweets, for each month from November 2019 to April 2020." />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicWuhan} />} label="Topics appearing linked to **wuhan** in a random sample of tweets, for each month from November 2019 to April 2020." />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicCoronavirus} />} label="Topics appearing linked to **wuhan** in a random sample of tweets, for each month from January to April 2020." />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicInfecting} />} label="Topics appearing linked to **wuhan** in a random sample of tweets, for each month from November 2019 to April 2020." />
+          </div>
+        </div>
 
         <p>We have tested several others keywords for which we thought we might see an apparition or increase of anti-asian topics. None of the following keywords (main associated topics in parentheses) appeared frequently in similar context to words denoting sinophobia:</p>
         <ul>
@@ -44,6 +99,21 @@ function App() {
           <li>Disease (Names of diseases, Description of diseases)</li>
           <li>Infection (Names of diseases, Description of diseases, Other medical terms)</li>
         </ul>
+      </section>
+
+      <section>
+        <h2 id="all-graphs-title">Topics appearing in conjunction to specific keywords - aggregates</h2>
+        For each topic, percentage of the 40 closest words to each of the selected keywords, for each month from November 2019 to April 2020
+        <div className="row">
+          <div className="column">
+            <ChartWithTitle chart={<BasicChart data={dataAggregateChinaChineseWuhan} />} label="Percentage of words linked to each topic, among the words appearing linked to **china**, **chinese** or **wuhan**, in a random sample of tweets, for each month from November 2019 to April 2020." />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <ChartWithTitle chart={<BasicChart data={dataAggregateKungFluWuflu} />} label="Percentage of words linked to each topic, among the words appearing linked to **kunglu** or **wuflu**, in a random sample of tweets, for each month from January to April 2020." />
+          </div>
+        </div>
       </section>
 
 
