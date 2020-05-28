@@ -42,7 +42,7 @@ export const BasicChart = (props: props) => (
         }}
         curve="monotoneX"
         enablePointLabel={false}
-        colors={{ scheme: 'accent' }}
+        colors={{ scheme: 'dark2' }}
         pointSize={3}
         pointBorderWidth={1}
         pointBorderColor={{
