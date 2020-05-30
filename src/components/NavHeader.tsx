@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
-import styles from '../styles/Main.module.less';
+import styles from '../styles/NavHeader.module.less';
 import { useHistory } from 'react-router-dom';
 interface Props {}
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout } from 'antd';
-import { Header } from '../components/Header';
-import styles from '../styles/Main.module.less';
+import { Header } from '../components/NavHeader';
+import styles from '../styles/MasterPage.module.less';
 import { HomePage } from './HomePage';
 import { Route, Switch } from 'react-router-dom';
 import { DataPage } from './DataPage';
@@ -13,9 +13,9 @@ interface Props {}
 
 export const Main: React.FC<Props> = () => {
   return (
-    <Layout className={styles.MainLayout}>
+    <Layout className={styles.MasterLayout}>
       <Header />
-      <Layout.Content className={styles.MainContent}>
+      <Layout.Content className={styles.MasterContent}>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/data" component={DataPage} />

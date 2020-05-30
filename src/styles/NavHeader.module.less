@@ -1,0 +1,32 @@
+@import 'globalSettings.module.less';
+
+.MenuHeader {
+  width: 100%;
+  @media only screen and (max-width: @mobile-cutoff) {
+    padding: 0;
+  }
+  font-weight: 600;
+  padding: 2vmin;
+  padding-right: 5vw;
+  padding-bottom: 10vh;
+  align-items: right;
+  background-color: #fff;
+}
+
+.MenuBar {
+  @media only screen and (max-width: @mobile-cutoff) {
+    font-size: @mobile-font-size;
+    padding: 1vw;
+    float: left;
+    display: block;
+  }
+  font-size: 14px;
+  padding-right: 5vw;
+  //padding: 2vmin;
+  padding: 0px;
+  float: right;
+}
+
+.MenuItem * {
+  margin: 100px;
+}
