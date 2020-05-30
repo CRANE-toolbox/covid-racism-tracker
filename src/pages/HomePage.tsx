@@ -3,6 +3,7 @@ import { Row, Col, Layout, Button } from 'antd';
 import styles from '../styles/HomePage.module.less';
 import { TwitterCircleFilled, LinkedinFilled, MailFilled } from '@ant-design/icons';
 import { useHistory } from 'react-router-dom';
+import { Routes } from '../routes';
 interface Props {}
 export const HomePage: React.FC<Props> = () => {
   let history = useHistory();
@@ -28,7 +29,7 @@ export const HomePage: React.FC<Props> = () => {
             autoFocus={true}
             className={styles.ActionButton}
             onClick={() => {
-              history.push('/data');
+              history.push(Routes.DATA);
             }}
           >
             See Data
@@ -39,7 +40,7 @@ export const HomePage: React.FC<Props> = () => {
             size="large"
             className={styles.ActionButton}
             onClick={() => {
-              history.push('/support');
+              history.push(Routes.SUPPORT);
             }}
           >
             Get Support

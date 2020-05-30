@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout, Menu } from 'antd';
 import styles from '../styles/NavHeader.module.less';
 import { useHistory } from 'react-router-dom';
+import { Routes } from '../routes';
 interface Props {}
 
 //Menu bar with buttons
@@ -14,7 +15,7 @@ export const Header: React.FC<Props> = () => {
           key="1"
           className={styles.MenuItem}
           onClick={() => {
-            history.push('/');
+            history.push(Routes.HOME);
           }}
         >
           Home
@@ -23,7 +24,7 @@ export const Header: React.FC<Props> = () => {
           key="2"
           className={styles.MenuItem}
           onClick={() => {
-            history.push('/data');
+            history.push(Routes.DATA);
           }}
         >
           Data
@@ -32,7 +33,7 @@ export const Header: React.FC<Props> = () => {
           key="3"
           className={styles.MenuItem}
           onClick={() => {
-            history.push('/support');
+            history.push(Routes.SUPPORT);
           }}
         >
           Support
@@ -41,7 +42,7 @@ export const Header: React.FC<Props> = () => {
           key="4"
           className={styles.MenuItem}
           onClick={() => {
-            history.push('/partners');
+            history.push(Routes.PARTNERS);
           }}
         >
           Partners
@@ -50,7 +51,7 @@ export const Header: React.FC<Props> = () => {
           key="5"
           className={styles.MenuItem}
           onClick={() => {
-            history.push('/support');
+            history.push(Routes.ABOUT);
           }}
         >
           About
