@@ -2,8 +2,10 @@ import React from 'react';
 import { Row, Col, Layout, Button } from 'antd';
 import styles from '../styles/HomePage.module.less';
 import { TwitterCircleFilled, LinkedinFilled, MailFilled } from '@ant-design/icons';
+import { useHistory } from 'react-router-dom';
 interface Props {}
 export const HomePage: React.FC<Props> = () => {
+  let history = useHistory();
   return (
     <Layout.Content>
       <Row justify="center">
@@ -21,12 +23,25 @@ export const HomePage: React.FC<Props> = () => {
       </Row>
       <Row justify="center" className={styles.ActionButtonsRow}>
         <Col>
-          <Button size="large" autoFocus={true} className={styles.ActionButton}>
+          <Button
+            size="large"
+            autoFocus={true}
+            className={styles.ActionButton}
+            onClick={() => {
+              history.push('/data');
+            }}
+          >
             See Data
           </Button>
         </Col>
         <Col>
-          <Button size="large" className={styles.ActionButton}>
+          <Button
+            size="large"
+            className={styles.ActionButton}
+            onClick={() => {
+              history.push('/support');
+            }}
+          >
             Get Support
           </Button>
         </Col>

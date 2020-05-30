@@ -6,6 +6,9 @@ workers_dev = true
 [env.staging]
 name = "cobra-web-staging"
 
+[env.rebrand]
+name = "cobra-web-rebrand"
+
 [site]
 bucket = "./build"
 entry-point = "workers-site"

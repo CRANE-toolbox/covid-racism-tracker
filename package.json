@@ -34,6 +34,7 @@
     "eject": "react-scripts eject",
     "site": "npm run build && wrangler publish",
     "staging": "npm run build && wrangler publish --env staging",
+    "rebrand": "npm run build && wrangler publish --env rebrand",
     "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
