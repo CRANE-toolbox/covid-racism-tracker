@@ -49,13 +49,13 @@ export const HomePage: React.FC<Props> = () => {
       </Row>
       <Row justify="center" className={styles.SocialIconsRow}>
         <Col>
-          <TwitterCircleFilled style={{ fontSize: '48px' }} className={styles.HomeSocialIcons} />
+          <TwitterCircleFilled className={styles.HomeSocialIcons} />
         </Col>
         <Col>
-          <LinkedinFilled style={{ fontSize: '48px' }} className={styles.HomeSocialIcons} />
+          <LinkedinFilled className={styles.HomeSocialIcons} />
         </Col>
         <Col>
-          <MailFilled style={{ fontSize: '48px' }} className={styles.HomeSocialIcons} />
+          <MailFilled className={styles.HomeSocialIcons} />
         </Col>
       </Row>
     </Layout.Content>
