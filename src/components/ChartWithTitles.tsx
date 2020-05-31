@@ -10,10 +10,10 @@ interface props {
 export const ChartWithTitle = (props: props) => {
 
     const divStyle = {
-        fontSize: 20,
+        fontSize: 32,
         marginBottom: -20,
-        marginLeft: "5%",
-        marginRight: "5%"
+        marginLeft: "10%",
+        marginRight: "10%"
     };
 
 
@@ -31,6 +31,6 @@ export const ChartWithTitle = (props: props) => {
 }
 
 ChartWithTitle.defaultProps = {
-    height: "50vh",
+    height: "80vh",
     width: "100vw"
 } as Partial<props>;

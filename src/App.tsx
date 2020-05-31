@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BasicChart } from './charts/lineChart';
+import { BasicChart, TopicLineChart } from './charts/lineChart';
 import { dataClassifier, dataSlurs, dataSlursByWeek, dataTopicWuflu, dataTopicChina, dataTopicWuhan, dataTopicCovid, dataTopicVirus, dataTopicKungflu, dataTopicChinese, dataTopicCoronavirus, dataTopicInfecting, dataAggregateChinaChineseWuhan, dataAggregateKungFluWuflu } from './resources/data';
 import { ChartWithTitle } from './components/ChartWithTitles'
 import { CustomResponsiveBump } from './charts/areaBump';
@@ -106,12 +106,12 @@ function App() {
         For each topic, percentage of the 40 closest words to each of the selected keywords, for each month from November 2019 to April 2020
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<BasicChart data={dataAggregateChinaChineseWuhan} />} label="Percentage of words linked to each topic, among the words appearing linked to **china**, **chinese** or **wuhan**, in a random sample of tweets, for each month from November 2019 to April 2020." />
+            <ChartWithTitle chart={<TopicLineChart data={dataAggregateChinaChineseWuhan} />} label="Percentage of words linked to each topic, among the words appearing linked to **china**, **chinese** or **wuhan**, in a random sample of tweets, for each month from November 2019 to April 2020." />
           </div>
         </div>
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<BasicChart data={dataAggregateKungFluWuflu} />} label="Percentage of words linked to each topic, among the words appearing linked to **kunglu** or **wuflu**, in a random sample of tweets, for each month from January to April 2020." />
+            <ChartWithTitle chart={<TopicLineChart data={dataAggregateKungFluWuflu} />} label="Percentage of words linked to each topic, among the words appearing linked to **kunglu** or **wuflu**, in a random sample of tweets, for each month from January to April 2020." />
           </div>
         </div>
       </section>

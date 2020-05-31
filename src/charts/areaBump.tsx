@@ -24,7 +24,6 @@ export const CustomResponsiveBump = (props: props) => (
         spacing={8}
         colors={{ scheme: 'nivo' }}
         blendMode="multiply"
-        startLabel="id"
         axisTop={{
             tickSize: 5,
             tickPadding: 5,
