@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BasicChart, TopicLineChart } from './charts/lineChart';
-import { dataClassifier, dataSlurs, dataSlursByWeek, dataTopicWuflu, dataTopicChina, dataTopicWuhan, dataTopicCovid, dataTopicVirus, dataTopicKungflu, dataTopicChinese, dataTopicCoronavirus, dataTopicInfecting, dataAggregateChinaChineseWuhan, dataAggregateKungFluWuflu } from './resources/data';
+import { dataSlurs, dataSlursByWeek, dataTopicWuflu, dataTopicChina, dataTopicWuhan, dataTopicCovid, dataTopicVirus, dataTopicKungflu, dataTopicChinese, dataTopicCoronavirus, dataTopicInfecting, dataAggregateChinaChineseWuhan, dataAggregateKungFluWuflu } from './resources/data';
 import { ChartWithTitle } from './components/ChartWithTitles'
 import { CustomResponsiveBump } from './charts/areaBump';
 import mainImg from './assets/main-photo.jpg';
@@ -18,72 +18,66 @@ function App() {
 
       <section>
         <h2 id="all-graphs-title">Frequency of sinophobic slurs on Twitter</h2>
-        <ChartWithTitle chart={<BasicChart data={dataSlurs} />} label="Daily evolution of the frequency of several sinophobic slurs on Twitter from November 2019 to April 2020" />
-        <ChartWithTitle chart={<BasicChart data={dataSlursByWeek} />} label="Weekly evolution of the frequency of several sinophobic slurs on Twitter from November 2019 to April 2020" />
+        <ChartWithTitle chart={<BasicChart data={dataSlurs} />} label={<div>Daily evolution of Sinophobic Slurs Frequency on Twitter (November 2019 to April 2020)</div>} />
+        <ChartWithTitle chart={<BasicChart data={dataSlursByWeek} />} label={<div>Weekly evolution of Sinophobic Slurs Frequency on Twitter (November 2019 to April 2020)</div>} />
         <p>Clear decrease in the use of "chinazi". Slight increase in the use of "chink" and "gook". Two periods with higher use of "chingchong/ching chong/ching-chong", in January and in the second half of March (coincidates with Trump's discourse on the "Chinese virus").</p>
       </section>
 
       <section>
-        <h2 id="all-graphs-title">Evolution of Sinophobic and Anti-Black Hate Speech</h2>
-        <ChartWithTitle chart={<BasicChart data={dataClassifier} />} label="Evolution of the share of sinophobic hate speech on Twitter from November 2019 to April 2020" />
-        <p>Non-conclusive results, we can't really trust the classifier since we don't have test data.</p>
-      </section>
-
-      <section>
-        <h2 id="all-graphs-title">New sinophobic slurs</h2>
-        <p>By looking at words that appear in similar context to common sinophobic slurs (**chink** and **chinaman**), wa have identified two words as potential new sinophobic terms:</p>
+        <h2 id="all-graphs-title">Newly identified sinophobic slurs</h2>
+        <p>By looking at words that appear in similar context to common sinophobic slurs (<i>Chink</i> and <i>Chinaman</i>), wa have identified two words as potential new sinophobic terms:</p>
         <ul>
-          <li>**coronachan** could come from the name of the virus and the Japanese suffix -chan for girls</li>
-          <li>**beak** could refer to the exagerated kissing shape one can make with their mouth, that appears to be popular for selfies in some young asian communities (needs checking)</li>
+          <li><i>Coronachan</i> could come from the name of the virus and the Japanese suffix -chan for girls</li>
+          <li><i>Beak</i> could refer to the exagerated kissing shape one can make with their mouth, that appears to be popular for selfies in some young asian communities (needs checking)</li>
         </ul>
       </section>
 
       <section>
         <h2 id="all-graphs-title">Topics appearing in conjunction to specific keywords</h2>
-        For each keyword, rank and volume of the topics present in the 40 closest words, for each month from November 2019 to April 2020
+        For each keyword, rank and volume of the topics present in the 40 closest words, for each month from November 2019 to April 2020. Analysis performed on a random sample of tweets obtained through Twitter Streaming API.
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicVirus} />} label="Topics appearing linked to **virus** in a random sample of tweets, for each month from November 2019 to April 2020." />
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicVirus} />} label={<div>Topics appearing linked to <i>Virus</i> (November 2019 to April 2020).</div>} />
           </div>
         </div>
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicCovid} />} label="Topics appearing linked to **covid** in a random sample of tweets, for each month from February to April 2020." />
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicCovid} />} label={<div>Topics appearing linked to <i>Covid</i> (February to April 2020).</div>} />
           </div>
         </div>
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicWuflu} />} label="Topics appearing linked to **wuflu** in a random sample of tweets, for each month from January to April 2020." />
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicWuflu} />} label={<div>Topics appearing linked to <i>Wuflu</i> (January to April 2020).</div>} />
           </div>
         </div>
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicKungflu} />} label="Topics appearing linked to **kungflu** in a random sample of tweets, for each month from March to April 2020." />
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicKungflu} />} label={<div>Topics appearing linked to <i>Kungflu</i> (March to April 2020).</div>} />
           </div>
         </div>
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicChina} />} label="Topics appearing linked to **china** in a random sample of tweets, for each month from November 2019 to April 2020." />
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicChina} />} label={<div>Topics appearing linked to <i>China</i> (November 2019 to April 2020).</div>} />
           </div>
         </div>
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicChinese} />} label="Topics appearing linked to **chinese** in a random sample of tweets, for each month from November 2019 to April 2020." />
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicChinese} />} label={<div>Topics appearing linked to <i>Chinese</i> (November 2019 to April 2020).</div> }/>
           </div>
         </div>
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicWuhan} />} label="Topics appearing linked to **wuhan** in a random sample of tweets, for each month from November 2019 to April 2020." />
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicWuhan} />} label={<div>Topics appearing linked to <i>Wuhan</i> (November 2019 to April 2020).</div>} />
           </div>
         </div>
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicCoronavirus} />} label="Topics appearing linked to **wuhan** in a random sample of tweets, for each month from January to April 2020." />
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicCoronavirus} />} label={<div>Topics appearing linked to <i>Coronavirus</i> (January to April 2020).</div>} />
           </div>
         </div>
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicInfecting} />} label="Topics appearing linked to **wuhan** in a random sample of tweets, for each month from November 2019 to April 2020." />
+            <ChartWithTitle chart={<CustomResponsiveBump data={dataTopicInfecting} />} label={<div>Topics appearing linked to <i>Infecting</i> (November 2019 to April 2020).</div>} />
           </div>
         </div>
 
@@ -102,16 +96,16 @@ function App() {
       </section>
 
       <section>
-        <h2 id="all-graphs-title">Topics appearing in conjunction to specific keywords - aggregates</h2>
-        For each topic, percentage of the 40 closest words to each of the selected keywords, for each month from November 2019 to April 2020
+        <h2 id="all-graphs-title">Topics appearing in conjunction to specific keywords - Aggregation</h2>
+        For each topic, percentage of the 40 closest words to each of the selected keywords, for each month from November 2019 to April 2020. Analysis performed on a random sample of tweets obtained through Twitter Streaming API.
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<TopicLineChart data={dataAggregateChinaChineseWuhan} />} label="Percentage of words linked to each topic, among the words appearing linked to **china**, **chinese** or **wuhan**, in a random sample of tweets, for each month from November 2019 to April 2020." />
+            <ChartWithTitle chart={<TopicLineChart data={dataAggregateChinaChineseWuhan} />} label={<div>Coverage of prevalent topics in the words linked to <i>China</i>, <i>Chinese</i> or <i>Wuhan</i> (November 2019 to April 2020).</div>} />
           </div>
         </div>
         <div className="row">
           <div className="column">
-            <ChartWithTitle chart={<TopicLineChart data={dataAggregateKungFluWuflu} />} label="Percentage of words linked to each topic, among the words appearing linked to **kunglu** or **wuflu**, in a random sample of tweets, for each month from January to April 2020." />
+            <ChartWithTitle chart={<TopicLineChart data={dataAggregateKungFluWuflu} />} label={<div>Coverage of prevalent topics in the words linked to <i>Kunglu</i> or <i>Wuflu</i> (January to April 2020).</div>} />
           </div>
         </div>
       </section>
