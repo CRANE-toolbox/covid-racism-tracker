@@ -24,13 +24,22 @@ export const Header: React.FC<Props> = () => {
           key="2"
           className={styles.MenuItem}
           onClick={() => {
+            history.push(Routes.ABOUT);
+          }}
+        >
+          About
+        </Menu.Item>
+        <Menu.Item
+          key="3"
+          className={styles.MenuItem}
+          onClick={() => {
             history.push(Routes.DATA);
           }}
         >
           Data
         </Menu.Item>
         <Menu.Item
-          key="3"
+          key="4"
           className={styles.MenuItem}
           onClick={() => {
             history.push(Routes.SUPPORT);
@@ -39,22 +48,13 @@ export const Header: React.FC<Props> = () => {
           Support
         </Menu.Item>
         <Menu.Item
-          key="4"
+          key="5"
           className={styles.MenuItem}
           onClick={() => {
             history.push(Routes.PARTNERS);
           }}
         >
           Partners
-        </Menu.Item>
-        <Menu.Item
-          key="5"
-          className={styles.MenuItem}
-          onClick={() => {
-            history.push(Routes.ABOUT);
-          }}
-        >
-          About
         </Menu.Item>
       </Menu>
     </Layout.Header>
