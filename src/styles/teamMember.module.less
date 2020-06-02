@@ -1,0 +1,69 @@
+@import './globalSettings.module.less';
+
+.Wrapper {
+    padding-top: 3rem;
+    margin: 0 0 0 0;
+    margin-right: 0px;
+    width: min-content;
+}
+
+.Test {
+
+}
+
+.Wrapper > * {
+    margin: 0 0 0 0;
+}
+
+.Box {
+    @media only screen and (max-width: @mobile-cutoff) {
+        width: 80vw;
+        height: min-content;
+    }
+    background: #ffffff;
+    box-shadow: 0.1875rem 0.1875rem 0.9375rem rgba(63, 61, 86, 0.25);
+    width: 24.68rem;
+    height: 14.625rem;
+    text-align: center;
+}
+
+.Photo {
+    position: relative;
+    bottom: 2.5em;
+    border-radius: 50%;
+    text-align: center;
+    width: calc(4.5rem + 2.6vw)
+
+
+}
+
+.Name {
+    position: relative;
+    bottom: 2.5rem;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.56rem;
+    text-align: center;
+}
+
+.Position {
+    position: relative;
+    bottom: 2.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.Bio {
+    position: relative;
+    bottom: 2.0rem;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #292929;
+}

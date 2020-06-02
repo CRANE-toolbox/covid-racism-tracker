@@ -16,6 +16,7 @@
     "@types/react-dom": "^16.9.6",
     "antd": "^4.2.5",
     "create-react-class": "^15.6.3",
+    "csstype": "^2.6.10",
     "customize-cra": "^1.0.0-alpha.0",
     "firebase": "^7.14.2",
     "rcolor": "^2.0.2",

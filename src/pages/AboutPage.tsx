@@ -1,14 +1,14 @@
 import React from 'react';
-import { Row, Col, Space } from 'antd';
+import { Row, Col, Space, Layout } from 'antd';
 import styles from '../styles/AboutPage.module.less';
 import gProfile from '../assets/gianluca_profile.png';
+import testPrpfile from '../assets/logo192.png';
 import { ReactComponent as Distance } from '../assets/social_distancing.svg';
 import { UserProfile } from '../components/userProfile';
-import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
+import { MemberProfile } from '../components/teamMember';
 interface Props {}
 
 export const AboutPage: React.FC<Props> = () => {
-  const screens = useBreakpoint();
   return (
     <div>
       <Row>
@@ -83,8 +83,63 @@ export const AboutPage: React.FC<Props> = () => {
         <Col span={24}>
           <body>
             orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo
-            convallis tellus, et ultricies ex tellus nec nisi.
+            convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut
+            luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis
+            scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet,
+            consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex
+            tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie
+            varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at,
+            aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum
+            dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus,
+            et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec
+            molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus
+            ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing
+            elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem
+            ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis
+            tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus,
+            velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis
+            scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet,
+            consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex
+            tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie
+            varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at,
+            aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi.
           </body>
+        </Col>
+      </Row>
+      <div style={{ padding: '45px' }} />
+      <Row gutter={[75, 36]} style={{ margin: '0 auto' }}>
+        <Col>
+          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+        </Col>
+        <Col>
+          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+        </Col>
+        <Col>
+          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+        </Col>
+      </Row>
+      <Row gutter={[75, 36]}>
+        <Col>
+          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+        </Col>
+        <Col>
+          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+        </Col>
+        <Col>
+          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+        </Col>
+      </Row>
+      <Row gutter={[75, 36]}>
+        <Col>
+          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+        </Col>
+        <Col>
+          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+        </Col>
+        <Col>
+          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
         </Col>
       </Row>
     </div>
