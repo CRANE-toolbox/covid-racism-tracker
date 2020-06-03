@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Layout, Button } from 'antd';
-import styles from '../styles/HomePage.module.less';
+import styles from '../styles/PartnersPage.module.less';
 import { useHistory } from 'react-router-dom';
 import { Routes } from '../routes';
 interface Props {}
@@ -10,12 +10,12 @@ export const PartnersPage: React.FC<Props> = () => {
   return (
     <Layout.Content>
       <Row justify="center">
-        <Col className={styles.HomePageColumnContent}>
+        <Col className={styles.PartnersPageColumnContent}>
           <h1 className={styles.h1}>For Organizations and Partners</h1>
         </Col>
       </Row>
       <Row justify="center">
-        <Col className={styles.HomePageColumnContent}>
+        <Col className={styles.PartnersPageColumnContent}>
           <p><strong>What can you do with this data?</strong></p>
           <p>
             There are many nonprofits and social impact enterprises in existence
