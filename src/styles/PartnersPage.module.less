@@ -1,0 +1,46 @@
+@import 'globalSettings.module.less';
+
+.SocialIconsRow > * {
+  padding-top: 10vh;
+  padding: 1vw;
+}
+
+.HomeSocialIcons   > * {
+  @media only screen and (max-width: @mobile-cutoff) {
+    font-size: 15vw;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  font-size: 48px;
+  padding: 0px;
+}
+.ActionButtonsRow > * {
+  padding: 2vw;
+}
+
+.ActionButton {
+  @media only screen and (max-width: @mobile-cutoff) {
+    width: fit-content;
+    height: fit-content;
+    font-size: large;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  width: 10vw;
+  height: 3.33vw;
+  font-weight: 500;
+  font-size: 1vw;
+  color: #292929;
+  background-color: #ffca0f;
+}
+
+.HomePageColumnContent > * {
+  @media only screen and (max-width: @mobile-cutoff) {
+    width: fit-content;
+  }
+  width: 50vw;
+  padding: 1vw;
+  text-align: center;
+}
