@@ -6,6 +6,18 @@
     padding-top: 0;
 }
 
+.SubTitleContent {
+    text-align: center;
+}
+
+.AboutProfileInfo {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
 .MidTitle {
     text-align: center;
     padding: 25px;
@@ -21,15 +33,26 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
-    font-size: 25px;    
+    font-size: 25px;
 }
-.AllRow{
+
+.AllRow {
     padding-top: 50px;
     padding-bottom: 25px;
 }
 
-.SocialDistanceGraphic{
+.SocialDistanceGraphic {
+    @media only screen and (max-width: @mobile-cutoff) {
+        width: 100%;
+        height: auto;
+    }
+    position: relative;
     padding: 10px;
-    width: 23vw;
+    width: calc(14rem + 10vw);
     height: auto;
+}
+
+.TeamProfileRow {
+    margin: 0 auto;
+    display: table;
 }

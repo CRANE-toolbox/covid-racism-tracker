@@ -6,7 +6,7 @@ import testPrpfile from '../assets/logo192.png';
 import { ReactComponent as Distance } from '../assets/social_distancing.svg';
 import { UserProfile } from '../components/userProfile';
 import { MemberProfile } from '../components/teamMember';
-interface Props {}
+interface Props { }
 
 export const AboutPage: React.FC<Props> = () => {
   return (
@@ -18,14 +18,16 @@ export const AboutPage: React.FC<Props> = () => {
       </Row>
       <Row>
         <Col span={24}>
-          With COVID-19 causing a global pandemic, fear and panic increased, but so did the direct racist and discriminatory sentiment targeted towards the Chinese race, culture,
-          and country, also known as Sinophobia. Unfortunately, this emergence of racist sentiment is not a new feature in society, but with the current global health crisis,
-          articles, interactions, and overall rhetoric has proved to be inherently targeted towards the Chinese race. It is critical to understand how situations of mass hysteria
-          and global crises can increase not just Sinophobic, but xenophobic sentiment.
+          <body className={styles.SubTitleContent}>
+            With COVID-19 causing a global pandemic, fear and panic increased, but so did the direct racist and discriminatory sentiment targeted towards the Chinese race, culture,
+            and country, also known as Sinophobia. Unfortunately, this emergence of racist sentiment is not a new feature in society, but with the current global health crisis,
+            articles, interactions, and overall rhetoric has proved to be inherently targeted towards the Chinese race. It is critical to understand how situations of mass hysteria
+            and global crises can increase not just Sinophobic, but xenophobic sentiment.
+          </body>
         </Col>
       </Row>
       <Row className={styles.AllRow}>
-        <Col span={16}>
+        <Col sm={24} md={12} lg={16}>
           <Space size={16} direction="horizontal">
             <h2 className={styles.SubTitle}>What is Sinophobia?</h2>
           </Space>
@@ -35,7 +37,7 @@ export const AboutPage: React.FC<Props> = () => {
             government. It is also said to include the fear or dislike of Chinese-made goods.
           </body>
         </Col>
-        <Col span={8}>
+        <Col sm={24} md={12} lg={8}>
           <Distance className={styles.SocialDistanceGraphic} />
         </Col>
       </Row>
@@ -56,23 +58,28 @@ export const AboutPage: React.FC<Props> = () => {
         </Col>
       </Row>
       <Row>
-        <Col span={12}>
-          <UserProfile
-            photo={gProfile}
-            name="Gianluca Stringhini"
-            bio="Assistant Professor in the Department of Electrical and Computer Engineering at Boston University, co-directing the Security Lab (SeclaBU)"
-            linkText="SEC Lab"
-          />
-        </Col>
-        <Col span={12}>
-          <body className={styles.greyText}>
-            "In my research I apply a data-driven approach to better understand malicious activity on the Internet.   Through the collection and analysis of large-scale datasets, I
-            develop novel and robust mitigation techniques to make the Internet a safer place. My research involves a mix of quantitative analysis, (some) qualitative analysis,
-            machine learning, crime science, and systems design. As examples, recently I have been investigating the spread of alternative news and memes on online social networks,
-            raids organized by trolls against other Internet users, the evolution of cyberattacks, cyberbullying, ransomware, online dating scams, money laundering schemes linked
-            to cybercrime, malware delivery networks, and online social network compromises. My research is supported by the NSF, Google, and Facebook."
-          </body>
-        </Col>
+        <UserProfile
+          photo={gProfile}
+          name="Gianluca Stringhini"
+          bio="Assistant Professor in the Department of Electrical and Computer Engineering at Boston University, co-directing the Security Lab (SeclaBU)"
+          linkText="SEC Lab"
+        />
+        <body className={styles.AboutProfileInfo}>
+          <div> "In my research I apply a data-driven approach to better understand malicious activity on the Internet. </div>
+          <br />
+          <div>
+            Through the collection and analysis of large-scale datasets, I develop novel and robust mitigation techniques to make the Internet a safer place. My research involves a
+            mix of quantitative analysis, (some) qualitative analysis, machine learning, crime science, and systems design.
+          </div>
+          <br />
+          <div>
+            As examples, recently I have been investigating the spread of alternative news and memes on online social networks, raids organized by trolls against other Internet
+            users, the evolution of cyberattacks, cyberbullying, ransomware, online dating scams, money laundering schemes linked to cybercrime, malware delivery networks, and
+            online social network compromises.
+          </div>
+          <br />
+          <div>My research is supported by the NSF, Google, and Facebook."</div>
+        </body>
       </Row>
       <Row>
         <Col span={24}>
@@ -81,67 +88,46 @@ export const AboutPage: React.FC<Props> = () => {
       </Row>
       <Row>
         <Col span={24}>
-          <body>
-            orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo
-            convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut
-            luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis
-            scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet,
-            consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex
-            tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie
-            varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at,
-            aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum
-            dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus,
-            et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec
-            molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus
-            ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing
-            elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem
-            ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis
-            tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus,
-            velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis
-            scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet,
-            consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex
-            tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie
-            varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget turpis scelerisque, dapibus ante at,
-            aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi. orem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed eget turpis scelerisque, dapibus ante at, aliquam sem. Ut luctus, velit nec molestie varius, dui leo convallis tellus, et ultricies ex tellus nec nisi.
+          <body className={styles.SubTitleContent}>
+            LasProin consectetur tempus lectus, sit amet fermentum ante tempor ut. Ut ullamcorper nunc tellus, non auctor ligula commodo sed. Curabitur elit diam, consequat at
+            pretium ut, aliquam eget lorem. Nam eget ligula ac tellus cursus elementum eget id magna.
           </body>
         </Col>
       </Row>
-      <div style={{ padding: '45px' }} />
-      <Row gutter={[75, 36]} style={{ margin: '0 auto' }}>
-        <Col>
-          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
-        </Col>
-        <Col>
-          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
-        </Col>
-        <Col>
-          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
-        </Col>
-      </Row>
-      <Row gutter={[75, 36]}>
-        <Col>
-          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
-        </Col>
-        <Col>
-          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
-        </Col>
-        <Col>
-          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
-        </Col>
-      </Row>
-      <Row gutter={[75, 36]}>
-        <Col>
-          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
-        </Col>
-        <Col>
-          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
-        </Col>
-        <Col>
-          <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
-        </Col>
-      </Row>
+      <div style={{ padding: '45px', margin: '0 auto' }} />
+      <div style={{ margin: '0 auto', textAlign: 'center' }}>
+        <Row gutter={[25, 25]}>
+          <Col flex={1.66} className={styles.TeamProfileRow}>
+            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is bio you say yes this isso you say yes his iyes this is a longer bioooooooooo" photo={testPrpfile} />
+          </Col>
+          <Col flex={1.66} className={styles.TeamProfileRow}>
+            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longerlongerlonger bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+          </Col>
+          <Col flex={1.66} className={styles.TeamProfileRow}>
+            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+          </Col>
+
+          <Col flex={1.66} className={styles.TeamProfileRow}>
+            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="Th you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+          </Col>
+          <Col flex={1.66} className={styles.TeamProfileRow}>
+            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longersay yes this is a longer bioooooooooo" photo={testPrpfile} />
+          </Col>
+          <Col flex={1.66} className={styles.TeamProfileRow}>
+            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+          </Col>
+
+          <Col flex={1.66} className={styles.TeamProfileRow}>
+            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+          </Col>
+          <Col flex={1.66} className={styles.TeamProfileRow}>
+            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bi this is a longer bioooooooooo" photo={testPrpfile} />
+          </Col>
+          <Col flex={1.66} className={styles.TeamProfileRow}>
+            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+          </Col>
+        </Row>
+      </div>
     </div>
   );
 };

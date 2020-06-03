@@ -1,3 +1,5 @@
+@import './globalSettings.module.less';
+
 .Wrapper { 
     text-align: center;
     padding: 20px;
@@ -22,18 +24,22 @@
 }
 
 .Bio {
-  font-family: Montserrat;
+  @media only screen and (max-width: @mobile-cutoff) {
+    width: 100%;
+    height: auto;
+}
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   text-align: center;
   margin: auto;
-  width: 25vw;
+  width: 30vw;
 
 }
 
 .Link {
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
   font-size: 18px;

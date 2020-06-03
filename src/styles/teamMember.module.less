@@ -2,30 +2,26 @@
 
 .Wrapper {
     padding-top: 3rem;
-    margin: 0 0 0 0;
-    margin-right: 0px;
-    width: min-content;
+    width: min-content;;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.Test {
-
-}
-
-.Wrapper > * {
-    margin: 0 0 0 0;
-}
 
 .Box {
     @media only screen and (max-width: @mobile-cutoff) {
-        width: 80vw;
-        height: min-content;
+        width: 75vw;
+        height: fit-content;
+        margin: auto;
     }
     background: #ffffff;
     box-shadow: 0.1875rem 0.1875rem 0.9375rem rgba(63, 61, 86, 0.25);
     width: 24.68rem;
     height: 14.625rem;
     text-align: center;
+    margin: auto;
 }
+
 
 .Photo {
     position: relative;
@@ -58,6 +54,7 @@
 }
 
 .Bio {
+    padding: 0.5em;
     position: relative;
     bottom: 2.0rem;
     font-family: 'Roboto';
@@ -66,4 +63,5 @@
     font-size: 1.25rem;
     text-align: center;
     color: #292929;
+    height: 100%
 }
