@@ -1,6 +1,4 @@
 import React from 'react';
-import CSS from 'csstype';
-import { Row, Col } from 'antd';
 import styles from '../styles/teamMember.module.less';
 
 interface Props {

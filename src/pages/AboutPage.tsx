@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Space, Layout } from 'antd';
+import { Row, Col, Space } from 'antd';
 import styles from '../styles/AboutPage.module.less';
 import gProfile from '../assets/gianluca_profile.png';
 import testPrpfile from '../assets/logo192.png';
