@@ -1,10 +1,45 @@
 import React from 'react';
-import { Row, Col, Layout, Button } from 'antd';
+import { Row, Col, Layout, Button, Table } from 'antd';
 import styles from '../styles/SupportPage.module.less';
 import { useHistory } from 'react-router-dom';
 import { Routes } from '../routes';
 interface Props {}
+
 export const SupportPage: React.FC<Props> = () => {
+
+  const dataSource = [
+    {
+      key: '1',
+      name: 'Organization Name 1',
+      phoneNumber: '00-000-000',
+      website: 'www.website.com',
+    },
+    {
+      key: '2',
+      name: 'Organization Name 2',
+      phoneNumber: '00-000-000',
+      website: 'www.website.com',
+    },
+  ];
+
+  const columns = [
+    {
+      title: 'Name',
+      dataIndex: 'name',
+      key: 'name',
+    },
+    {
+      title: 'Phone Number',
+      dataIndex: 'phoneNumber',
+      key: 'phoneNumber',
+    },
+    {
+      title: 'Website',
+      dataIndex: 'website',
+      key: 'website',
+    },
+  ];
+
   let history = useHistory();
   return (
     <Layout.Content>
@@ -26,10 +61,6 @@ export const SupportPage: React.FC<Props> = () => {
           </p>
           <p>View the different bystander resources we've collected below!</p>
           <p><strong>+00 6344 9755 85 55</strong></p>
-          <p>
-              Get Support
-              Organizations Willing to Help
-          </p>
         </Col>
       </Row>
       <Row justify="center" className={styles.ActionButtonsRow}>
@@ -45,6 +76,25 @@ export const SupportPage: React.FC<Props> = () => {
           </Button>
         </Col>
       </Row>
+      <Row justify="center">
+        <Col className={styles.SupportPageColumnContent}>
+          <h1 className={styles.h1}>Organizations Willing to Help</h1>
+        </Col>
+      </Row>
+
+
+      <Table dataSource={dataSource} columns={columns} bordered={false}/>;
+
+
+      <Row justify="center">
+        <Col className={styles.SupportPageColumnContent}>
+          <h1 className={styles.h1}>Download Stuff Here</h1>
+        </Col>
+      </Row>
+
+
+
+
     </Layout.Content>
   );
 };
