@@ -17,7 +17,7 @@ export const HomePage: React.FC<Props> = () => {
       <Row justify="center">
         <Col className={styles.HomePageColumnContent}>
           <p>
-            Project NAME is monitoring real-time racist rhetoric on Twitter. There is evidence that online hate speech predicts hate crime and human rights groups have argued that
+            Project CRANE is monitoring real-time racist rhetoric on Twitter. There is evidence that online hate speech predicts hate crime and human rights groups have argued that
             exposure to online hate speech normalizes such hatred for majority groups.
           </p>
         </Col>
