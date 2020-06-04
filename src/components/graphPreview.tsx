@@ -44,7 +44,7 @@ export const GraphPreview: React.FC<Props> = (props: Props) => {
         bodyStyle={modalStyle}
         centered={true}
         width="95vw"
-        mask={false}
+        mask={true}
         onCancel={closeModal}
         footer={null}
         children={ModalContent(props)}

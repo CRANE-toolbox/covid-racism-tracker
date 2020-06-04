@@ -5,6 +5,7 @@ import gProfile from '../assets/gianluca_profile.png';
 import testPrpfile from '../assets/logo192.png';
 import ianProfile from '../assets/ian_profile.jpg';
 import camProfile from '../assets/camelia_profile.jpg';
+import svetlanaProfile from '../assets/svetlana_profile.jpg';
 import rachaelProfile from '../assets/rachael_profile.jpg';
 import { ReactComponent as Distance } from '../assets/social_distancing.svg';
 import { UserProfile } from '../components/userProfile';
@@ -116,7 +117,12 @@ export const AboutPage: React.FC<Props> = () => {
           </Col>
 
           <Col flex={1.66} className={styles.TeamProfileRow}>
-            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="Th you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+            <MemberProfile
+              name="Svetlana M"
+              position="UI/UX"
+              bio="Passionate about learning and teaching, UX UI designer, linguist, copywriter and translator"
+              photo={testPrpfile}
+            />
           </Col>
           <Col flex={1.66} className={styles.TeamProfileRow}>
             <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longersay yes this is a longer bioooooooooo" photo={testPrpfile} />
