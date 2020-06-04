@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from '../styles/graphPreview.module.less';
 import useHover from '@react-hook/hover';
 import { ReactComponent as LineGraph } from '../assets/graph-line.svg';
 import { ReactComponent as FlowGraph } from '../assets/flow-graph.svg';
 import { COLORS } from '../styles/colors';
-import { Modal } from 'antd';
-import { ChartWithTitle } from './ChartWithTitles';
-import { BasicChart } from '../charts/lineChart';
+import { Modal, Button } from 'antd';
+
 import { ReactComponent as CloseIcon } from '../assets/circle-close.svg';
-import { CustomResponsiveBump } from '../charts/areaBump';
 
 interface Props {
   title: string;
+  modalTitle?: string;
   graph: React.ReactNode;
+  textContent?: string;
   GraphicType: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;
   hoverText?: string;
   hoverColor?: COLORS;
+  downloadLink?: string;
 }
 
 export const GraphPreview: React.FC<Props> = (props: Props) => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
-  const { title, graph, GraphicType } = props;
+  const { graph } = props;
   const target = React.useRef(null);
   const isHovering = useHover(target);
   const openModal = () => {
@@ -34,7 +35,6 @@ export const GraphPreview: React.FC<Props> = (props: Props) => {
   const modalStyle = {
     width: '100%',
     height: '100%',
-    border: 'none;',
   };
 
   return (
@@ -47,8 +47,9 @@ export const GraphPreview: React.FC<Props> = (props: Props) => {
         mask={false}
         onCancel={closeModal}
         footer={null}
+        children={ModalContent(props)}
         closeIcon={<CloseIcon style={{ width: '2.5rem', height: '2.5rem', marginTop: '.75rem' }} />}
-      ></Modal>
+      />
       <div className={styles.Box} ref={target} onClick={openModal}>
         {isHovering ? RenderHoverState(props) : RenderRestingState(props)}
       </div>
@@ -56,7 +57,19 @@ export const GraphPreview: React.FC<Props> = (props: Props) => {
   );
 };
 
-const RenderRestingState: React.FC<Props> = (props: Props, target) => {
+const ModalContent: React.FC<Props> = (props: Props) => {
+  const { modalTitle, textContent, graph } = props;
+  return (
+    <div className={styles.ModalContentWrapper}>
+      <h1 className={styles.ModalTitle}>{modalTitle}</h1>
+      {graph}
+      <body>{textContent}</body>
+      <Button className={styles.ActionButton}>Access our research Repo</Button>
+    </div>
+  );
+};
+
+const RenderRestingState: React.FC<Props> = (props: Props) => {
   const { title, GraphicType } = props;
   return (
     <div className={styles.RestingWrapper}>

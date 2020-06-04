@@ -3,12 +3,14 @@
 .Box {
     @media only screen and (max-width: @mobile-cutoff) {
         width: 75vw;
-        height: fit-content;
+        min-height: fit-content;
         margin: auto;
     }
+
     box-shadow: 0.1875rem 0.1875rem 0.9375rem rgba(63, 61, 86, 0.25);
-    width: 12rem;
-    height: 12rem;
+    width: 20.3125rem;
+    height: 17.5rem;
+    min-height: fit-content;
 }
 
 .Title {
@@ -17,11 +19,15 @@
     font-weight: bold;
     font-size: 1.25rem;
     text-align: center;
+    flex: 2
 }
 
 .SVGPrev {
+    min-width: 100%;
     width: 100%;
-    height: 100%;
+    justify-content: center;
+    flex-grow: 1;
+    vertical-align: bottom;
 }
 
 .HoverText {
@@ -34,8 +40,9 @@
     width: 100%;
     height: 100%;
     display: flex;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -43,11 +50,31 @@
     padding: 1.25rem;
     height: 100%;
     width: 100%;
+    // overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.ModalStyle  {
+.ModalStyle {
     height: 75vh;
     width: 100%;
     border: none;
+    text-align: center;
 }
 
+
+.ModalTitle { 
+    text-align: center;
+    width: 100%;
+}
+
+.ModalContentWrapper  {
+
+    text-align: center;
+    display: block;
+   
+
+
+}
