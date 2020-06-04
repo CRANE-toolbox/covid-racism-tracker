@@ -1,9 +1,9 @@
 @import 'globalSettings.module.less';
-
+@color: '#99999';
 .MenuHeader {
   width: 100%;
   @media only screen and (max-width: @mobile-cutoff) {
-    padding: 0;
+    padding: 1rem;
   }
   font-weight: 600;
   padding: 2vmin;
@@ -11,6 +11,12 @@
   padding-bottom: 10vh;
   align-items: right;
   background-color: #fff;
+}
+.MenuCol {
+  position: absolute;
+  padding-right: 3rem;
+  right: 0;
+  align-items: right;
 }
 
 .MenuBar {
@@ -29,4 +35,25 @@
 
 .MenuItem * {
   margin: 100px;
+}
+
+.MenuRow {
+  align-items: center;
+}
+
+.Logo {
+  margin-left: 5vw;
+  width: calc(3rem + 3vw);
+  height: calc(5rem + 1.5vw);
+  padding: 1rem;
+  transition: all .2s ease-in-out;
+}
+
+.Logo:hover{
+  transform: scale(1.1);
+}
+
+.Logo:active {
+  position: relative;
+  top: 0.2vh;
 }
