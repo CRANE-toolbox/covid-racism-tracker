@@ -1,6 +1,4 @@
 import { ResponsiveLine, Serie } from '@nivo/line';
-import { BasicTooltip } from '@nivo/tooltip';
-import PropTypes from 'prop-types';
 import React from 'react';
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
@@ -88,7 +86,7 @@ export const BasicChart = (props: props) => (
     }}
     yFormat="0.4%"
     axisLeft={{
-      legend: 'Percent of English original tweets containing the slur',
+      legend: 'Percent of tweets containing the slur',
       legendPosition: 'middle',
       legendOffset: -85,
       format: (value) => `${(Number(value) * 1000000) / 10000}%`, // Weird multiplication-division tip to avoid imprecise decimals

@@ -1,12 +1,13 @@
-import React from 'react';
-
 /**
  * Profile Photos
  */
 export { default as rachaelProfile } from './profilePhotos/rachael_profile.jpg';
 export { default as cameliaProfile } from './profilePhotos/camelia_profile.jpg';
 export { default as ianProfile } from './profilePhotos/ian_profile.jpg';
-export { default as gianlucaProfile } from './profilePhotos/gianluca_profile.png';
+export { default as svetlanaProfile } from './profilePhotos/svetlana_profile.jpg';
+export { default as linaProfile } from './profilePhotos/lina_profile.jpg';
+export { default as kellyProfile } from './profilePhotos/kelly_profile.jpg';
+export { default as gianlucaProfile } from './profilePhotos/gianluca_profile.jpg';
 
 /**
  * Social Icons

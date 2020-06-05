@@ -1,25 +1,24 @@
 import React from 'react';
-import { Layout, Row, Col } from 'antd';
+import { Row, Col } from 'antd';
 import styles from '../styles/Footer.module.less';
-import { LinkedinOutlined, MailOutlined, TwitterOutlined } from '@ant-design/icons';
+import { CircleEmail, DevPost, Github } from '../assets/assets.index';
+import { useHistory } from 'react-router-dom';
+import { ExternalRoutes } from '../routes';
+
 interface Props {}
 
 export const MainFooter: React.FC<Props> = () => {
+  let history = useHistory();
   return (
-    <Layout className={styles.FooterStyle}>
-      <Row className={styles.FooterRow}>
-        <Col className={styles.FooterText}></Col>
-        <Col className={styles.FooterText}>
-          Disclaimer: the information on this website is for educational purposes
-          only. Users' privacy is our utmost concern. No identifiable information
-          has been made public.
-        </Col>
-        <Col className={styles.FooterLogos}>
-          <TwitterOutlined className={styles.FooterSocialIcons} />
-          <LinkedinOutlined className={styles.FooterSocialIcons} />
-          <MailOutlined className={styles.FooterSocialIcons} />
-        </Col>
-      </Row>
-    </Layout>
+    <Row className={styles.FooterRow}>
+      <Col className={styles.FooterText} sm={24} md={16} lg={14}>
+        Disclaimer: The information on this website is for educational purposes only. Users’ privacy is our utmost concern. No identifiable information has been made public.
+      </Col>
+      <Col className={styles.FooterLogos}>
+        <CircleEmail className={styles.FooterSocialIcons} onClick={() => history.push(ExternalRoutes.EMAILUS)} />
+        <DevPost className={styles.FooterSocialIcons} onClick={() => history.push(ExternalRoutes.DEVPOST, null)} />
+        <Github className={styles.FooterSocialIcons} onClick={() => history.push(ExternalRoutes.GITHUB)} />
+      </Col>
+    </Row>
   );
 };

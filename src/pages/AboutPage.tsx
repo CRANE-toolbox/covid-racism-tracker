@@ -1,18 +1,16 @@
 import React from 'react';
-import { Row, Col, Space } from 'antd';
+import { Row, Col, Space, Button } from 'antd';
 import styles from '../styles/AboutPage.module.less';
-import gProfile from '../assets/gianluca_profile.png';
-import testPrpfile from '../assets/logo192.png';
-import ianProfile from '../assets/ian_profile.jpg';
-import camProfile from '../assets/camelia_profile.jpg';
-import svetlanaProfile from '../assets/svetlana_profile.jpg';
-import rachaelProfile from '../assets/rachael_profile.jpg';
 import { ReactComponent as Distance } from '../assets/social_distancing.svg';
 import { UserProfile } from '../components/userProfile';
 import { MemberProfile } from '../components/teamMember';
+import { ianProfile, gianlucaProfile, cameliaProfile, rachaelProfile, svetlanaProfile, linaProfile, kellyProfile } from '../assets/assets.index';
+import { useHistory } from 'react-router-dom';
+import { ExternalRoutes } from '../routes';
 interface Props {}
 
 export const AboutPage: React.FC<Props> = () => {
+  let history = useHistory();
   return (
     <div>
       <Row>
@@ -23,10 +21,10 @@ export const AboutPage: React.FC<Props> = () => {
       <Row>
         <Col span={24}>
           <body className={styles.SubTitleContent}>
-            With COVID-19 causing a global pandemic, fear and panic increased, but so did the direct racist and discriminatory sentiment targeted towards the Chinese race, culture,
-            and country, also known as Sinophobia. Unfortunately, this emergence of racist sentiment is not a new feature in society, but with the current global health crisis,
-            articles, interactions, and overall rhetoric has proved to be inherently targeted towards the Chinese race. It is critical to understand how situations of mass hysteria
-            and global crises can increase not just Sinophobic, but xenophobic sentiment.
+            Project CRANE is monitoring real-time racist rhetoric on Twitter. There is evidence that online hate speech predicts hate crime and human rights groups have argued that
+            exposure to online hate speech normalises such hatred for majority groups. We are hoping that tracking the changes in online sinophobic and racist rhetoric resulting
+            from the progress of the COVID-19 pandemic allows for hard exposure to those uninformed, as well as turn into a tool for change within victims and supporting
+            organizations.
           </body>
         </Col>
       </Row>
@@ -36,7 +34,7 @@ export const AboutPage: React.FC<Props> = () => {
             <h2 className={styles.SubTitle}>What is Sinophobia?</h2>
           </Space>
           <body className={styles.Content}>
-            In 2013, Pew Research Center from the United States conducted a survey over Sinophobia, finding that China was viewed favorably in just half (19 of 38) of the nations
+            In 2013, Pew Research Center from the United States conducted a survey over sinophobia, finding that China was viewed favorably in just half (19 of 38) of the nations
             surveyed, excluding China itself. Sinophobia is defined as the consistent hostility toward people of Chinese origin or toward Chinese culture, people, history, or
             government. It is also said to include the fear or dislike of Chinese-made goods.
           </body>
@@ -49,10 +47,10 @@ export const AboutPage: React.FC<Props> = () => {
         <Col span={24}>
           <h2 className={styles.SubTitle}>Sinophobia to Racism to Present Stage:</h2>
           <body>
-            Sinophobia and anti-Asian speech have always been actively present, as well as other racist speech within social media. The COVID-19 not only exposed this hate but
+            Sinophobia and anti-Asian speech have always been actively present, as well as other racist speech within social media. The COVID-19 not only exposed this hate, but
             allowed many of us to witness it as we are more than ever stuck in our phones. And more than ever, these racist attackers are on their phones as well spreading their
             words. Racist rhetoric affects everyone, from the “normalization” of racist slurs to the immense and disproportionate death rate in black and brown communities. Racism
-            is causing more lives to be lost in this pandemic from hate crimes-we must expose this data and urge for change. Here’s how you can help:
+            is causing more lives in this pandemic, we must expose this data, and urge for change.
           </body>
         </Col>
       </Row>
@@ -63,10 +61,11 @@ export const AboutPage: React.FC<Props> = () => {
       </Row>
       <Row>
         <UserProfile
-          photo={gProfile}
+          photo={gianlucaProfile}
           name="Gianluca Stringhini"
           bio="Assistant Professor in the Department of Electrical and Computer Engineering at Boston University, co-directing the Security Lab (SeclaBU)"
           linkText="SEC Lab"
+          link="https://seclab.bu.edu/people/gianluca/"
         />
         <body className={styles.AboutProfileInfo}>
           <div> "In my research I apply a data-driven approach to better understand malicious activity on the Internet. </div>
@@ -90,58 +89,64 @@ export const AboutPage: React.FC<Props> = () => {
           <h1 className={styles.MidTitle}>Team</h1>
         </Col>
       </Row>
-      <Row>
-        <Col span={24}>
-          <body className={styles.SubTitleContent}>
-            LasProin consectetur tempus lectus, sit amet fermentum ante tempor ut. Ut ullamcorper nunc tellus, non auctor ligula commodo sed. Curabitur elit diam, consequat at
-            pretium ut, aliquam eget lorem. Nam eget ligula ac tellus cursus elementum eget id magna.
-          </body>
+      <Row justify="center">
+        <Col span={24} className={styles.TeamContentSection}>
+          <div>
+            <body className={styles.SubTitleContent}>
+              Our team came together through the Resiliency Challenge Hackathon, in which students around the world came together for a nine-week, virtual hackathon, with
+              three-week sprint challenges aimed at catalyzing student innovation in response to the unprecedented situation facing colleges and communities in the wake of the
+              coronavirus pandemic.
+            </body>
+            <br />
+            <body className={styles.SubTitleContent}>To learn more about our team and the hackathon, check out our Devpost page!</body>
+            <Button className={styles.DevpostButton} onClick={() => history.push(ExternalRoutes.DEVPOST)}>
+              Devpost Page
+            </Button>
+          </div>
         </Col>
       </Row>
-      <div style={{ padding: '45px', margin: '0 auto' }} />
+      <div style={{ padding: '2rem', margin: '0 auto' }} />
       <div style={{ margin: '0 auto', textAlign: 'center' }}>
         <Row gutter={[25, 25]}>
-          <Col flex={1.66} className={styles.TeamProfileRow}>
+          <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
             <MemberProfile name="Ian Saucy" position="Tech" bio="Ian still needs to write his bio.." photo={ianProfile} />
           </Col>
-          <Col flex={1.66} className={styles.TeamProfileRow}>
-            <MemberProfile name="Camelia B" position="UI/UX" bio="This is a bio a longerlongerlonger bio you say yes this is a longer bioooooooooo" photo={camProfile} />
+          <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
+            <MemberProfile name="Camelia B" position="UI/UX" bio="Worked on UX Research, Branding and Logo Design, Content Copy" photo={cameliaProfile} />
           </Col>
-          <Col flex={1.66} className={styles.TeamProfileRow}>
-            <MemberProfile
-              name="Rachael Dier"
-              position="UX Researcher/Designer & Content Strategist"
-              bio="This is a bio a longer bio you say yes this is a longer bioooooooooo"
-              photo={rachaelProfile}
-            />
+          <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
+            <MemberProfile name="Rachael Dier" position="UX Researcher/Designer" bio="I worked on and oversaw UX/UI research and design" photo={rachaelProfile} />
           </Col>
 
-          <Col flex={1.66} className={styles.TeamProfileRow}>
+          <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
             <MemberProfile
               name="Svetlana M"
               position="UI/UX"
               bio="Passionate about learning and teaching, UX UI designer, linguist, copywriter and translator"
-              photo={testPrpfile}
+              photo={svetlanaProfile}
             />
           </Col>
-          <Col flex={1.66} className={styles.TeamProfileRow}>
-            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longersay yes this is a longer bioooooooooo" photo={testPrpfile} />
-          </Col>
-          <Col flex={1.66} className={styles.TeamProfileRow}>
-            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+          <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
+            <MemberProfile name="Lina Hayek" position="Design Consultant" bio="Design & Communication Strategy" photo={linaProfile} />
           </Col>
 
-          <Col flex={1.66} className={styles.TeamProfileRow}>
-            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
-          </Col>
-          <Col flex={1.66} className={styles.TeamProfileRow}>
-            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bi this is a longer bioooooooooo" photo={testPrpfile} />
-          </Col>
-          <Col flex={1.66} className={styles.TeamProfileRow}>
-            <MemberProfile name="Ian Saucy" position="Tech Dude" bio="This is a bio a longer bio you say yes this is a longer bioooooooooo" photo={testPrpfile} />
+          <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
+            <MemberProfile
+              name="Kelly Ly"
+              position="Undergraduate Programmer & Researcher"
+              bio="I worked on data collection, data analysis, website styling, and video editing"
+              photo={kellyProfile}
+            />
           </Col>
         </Row>
       </div>
     </div>
   );
 };
+/**
+ * A silly function to randomly order the profiles. Returns a random int that is used
+ * by the columns to choose their order
+ */
+function randProfileOrder(): number {
+  return Math.floor(Math.random() * Math.floor(25));
+}
