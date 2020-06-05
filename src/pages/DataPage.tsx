@@ -22,7 +22,6 @@ export const DataPage: React.FC<Props> = () => {
           <GraphPreview
             modalTitle="This is a title of the modal"
             title="Frequency on Twitter Twitter Twitter"
-            GraphicType={GraphType.FLOW}
             graph={
               <ChartWithTitle
                 chart={<BasicChart data={dataSlurs} />}

@@ -3,9 +3,10 @@
 The "main" of this CRA is in App.tsx(even though this actually called on index.tsx you should not touch that one). `App.tsx` can either have a bunch of react components and JSX(like it does right now) or expert one or more react components that then handle the more specific parts of code.
 
 ### Deployment
-Deployment happens automatically via Github Actions when a push to master occurs. Changes are compiled then pushed to the hosting provider.
+Deployment happens automatically via Github Actions when a push to master occurs. Changes are compiled then pushed to the hosting provider. You can also do a manual build and publish if you have the 
+wrangler CLI installed using the following npm script `npm run site`.
 #### Staging Deployment
-In addition, there is a staging environment available via the following npm script `npm run staging` which pushes changes to `https://cobra-web-staging.iansaucy.workers.dev`. Alternatively changes can be pushed manually via `wrangler publish --env staging`
+In addition, there is a staging environment available via the following npm script `npm run staging` which pushes changes to `https://crane-staging.iansaucy.workers.dev`. Alternatively changes can be pushed manually via `wrangler publish --env staging`
 
 ### The charts
 in `src/charts` live a few react components, they're basically just wrappers on the `nivo.rocks` library that we're using for data visualization but their goal is to allow easy expansion in the future.

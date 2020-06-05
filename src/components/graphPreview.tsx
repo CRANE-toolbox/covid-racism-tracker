@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/graphPreview.module.less';
 import useHover from '@react-hook/hover';
 import { COLORS } from '../styles/colors';
@@ -8,9 +8,9 @@ import { CircleClose, FlowGraphImg, LineGraphImg } from '../assets/assets.index'
 interface Props {
   title: string;
   modalTitle?: string;
-  graph: React.ReactNode;
+  graph?: React.ReactNode;
   textContent?: string;
-  GraphicType: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;
+  GraphicType?: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;
   hoverText?: string;
   hoverColor?: COLORS;
   downloadLink?: string;
@@ -18,16 +18,9 @@ interface Props {
 
 export const GraphPreview: React.FC<Props> = (props: Props) => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
-  const { graph } = props;
   const target = React.useRef(null);
   const isHovering = useHover(target);
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
+  const [state, setState] = useState(0);
 
   const modalStyle = {
     width: '100%',
@@ -42,12 +35,12 @@ export const GraphPreview: React.FC<Props> = (props: Props) => {
         centered={true}
         width="95vw"
         mask={true}
-        onCancel={closeModal}
+        onCancel={() => setIsOpen(false)}
         footer={null}
         children={ModalContent(props)}
         closeIcon={<CircleClose style={{ width: '2.5rem', height: '2.5rem', marginTop: '.75rem' }} />}
       />
-      <div className={styles.Box} ref={target} onClick={openModal}>
+      <div className={styles.Box} ref={target} onClick={() => setIsOpen(true)}>
         {isHovering ? RenderHoverState(props) : RenderRestingState(props)}
       </div>
     </>
@@ -56,13 +49,19 @@ export const GraphPreview: React.FC<Props> = (props: Props) => {
 
 const ModalContent: React.FC<Props> = (props: Props) => {
   const { modalTitle, textContent, graph } = props;
-  useEffect(() => {}, []);
+  const [state, setState] = useState(0);
+  useEffect(() => {
+    console.log('Hit');
+    setState(1);
+  });
   return (
     <div className={styles.ModalContentWrapper}>
       <h1 className={styles.ModalTitle}>{modalTitle}</h1>
       {graph}
       <body>{textContent}</body>
-      <Button className={styles.ActionButton}>Access our research Repo</Button>
+      <Button className={styles.ActionButton} onClick={() => setState(1)}>
+        Access our research Repo
+      </Button>
     </div>
   );
 };
@@ -71,8 +70,10 @@ const RenderRestingState: React.FC<Props> = (props: Props) => {
   const { title, GraphicType } = props;
   return (
     <div className={styles.RestingWrapper}>
-      <div className={styles.Title}> {title}</div>
-      <GraphicType className={styles.SVGPrev} />
+      <div className={styles.Title} style={{}}>
+        {title}
+      </div>
+      {GraphicType ? <GraphicType className={styles.SVGPrev} /> : null}
     </div>
   );
 };
