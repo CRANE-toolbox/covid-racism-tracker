@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col, Layout, Button, Table } from 'antd';
-import { dataSource, columns } from '../resources/organizationData';
+import { Row, Col, Layout, Button } from 'antd';
 import styles from '../styles/SupportPage.module.less';
 import { useHistory } from 'react-router-dom';
 import { Routes } from '../routes';
@@ -228,8 +227,6 @@ export const SupportPage: React.FC<Props> = () => {
           </div>
         </Col>
       </Row>
-
-      <Table dataSource={dataSource} columns={columns} bordered={false}/>;
 
     </Layout.Content>
   );
