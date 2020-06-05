@@ -14,29 +14,52 @@
     margin: 0 auto;
 }
 
+.HelpContent{
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    background-color: #424c6e;
+}
+
 .SupportContainer {
-    padding-bottom: 45px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .FlexRow {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  align-items: top;
-  margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: top;
+    margin: 0;
 }
 
+.HelpSection {
+    background-color: #424c6e;
+    padding-top: 10px;
+    color: white;
+    margin-top: 10px;
+    padding-top: 20px;
+}
 
 .HereLink {
     text-decoration: underline;
 }
 
+.HelpSubtitle {
+    color: white;
+}
+
 .MoreResources {
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
-    margin-bottom: 15px;
+    margin-top: 35px;
+    margin-bottom: 45px;
     text-align: center;
+    background-color: #424c6e;
+    color: white;
 }
 
 
@@ -44,7 +67,7 @@
     padding: 2vw;
 }
 
-.ActionButton {
+.ActionButtonLeft {
   @media only screen and (max-width: @mobile-cutoff) {
     width: fit-content;
     height: fit-content;
@@ -53,12 +76,31 @@
     padding-right: 25px;
   }
 
+  border-color: #424c6e;
   width: 10vw;
   height: 3.33vw;
   font-weight: 500;
   font-size: 1vw;
-  color: #292929;
+  color: #424c6e;
   background-color: #ffca0f;
+}
+
+.ActionButtonRight {
+  @media only screen and (max-width: @mobile-cutoff) {
+    width: fit-content;
+    height: fit-content;
+    font-size: large;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  border-color: #ffca0f;
+  width: 10vw;
+  height: 3.33vw;
+  font-weight: 500;
+  font-size: 1vw;
+  color: #ffca0f;
+  background-color: #424c6e;
 }
 
 .SupportPageColumnContent > * {
@@ -69,4 +111,3 @@
   padding: 1vw;
   text-align: center;
 }
-
