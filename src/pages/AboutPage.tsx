@@ -15,7 +15,7 @@ export const AboutPage: React.FC<Props> = () => {
     <div className={styles.PageWrapper}>
       <Row>
         <Col span={24} className={styles.Title}>
-          <h1>About Project CoBRa</h1>
+          <h1>About Project CRANE</h1>
         </Col>
       </Row>
       <Row>
