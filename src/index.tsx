@@ -17,7 +17,7 @@ ReactDOM.render(
 
 WebFont.load({
   google: {
-    families: ['Martel Sans:300,400,700', 'sans-serif', 'Playfair Display', 'serif', 'Montserrat:300,600,800', 'sans-serif'],
+    families: ['Martel Sans:300,400,700', 'sans-serif', 'Playfair Display', 'serif', 'Montserrat:300,600,800', 'sans-serif', 'Roboto:400,600,800', 'sans-serif'],
   },
 });
 

@@ -31,6 +31,9 @@ export { ReactComponent as Logo } from './LOGO.svg';
 export { ReactComponent as FlowGraphImg } from './components/flow-graph.svg';
 export { ReactComponent as LineGraphImg } from './components/graph-line.svg';
 export { ReactComponent as CircleClose } from './components/circle-close.svg';
+export { ReactComponent as SinglePersonImg } from './components/single_person.svg';
+export { ReactComponent as DuelPersonImg } from './components/duel_person.svg';
+export { ReactComponent as DoubleOrbImg } from './components/double_orb.svg';
 
 /**
  * Random
