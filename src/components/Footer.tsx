@@ -15,7 +15,9 @@ export const MainFooter: React.FC<Props> = () => {
         Disclaimer: The information on this website is for educational purposes only. Users’ privacy is our utmost concern. No identifiable information has been made public.
       </Col>
       <Col className={styles.FooterLogos}>
-        <CircleEmail className={styles.FooterSocialIcons} onClick={() => history.push(ExternalRoutes.EMAILUS)} />
+        <a href="https://forms.gle/fPnisqH8j5PgeLpH6" target="_blank" rel="noopener noreferrer">
+          <CircleEmail className={styles.FooterSocialIcons} />
+        </a>
         <DevPost className={styles.FooterSocialIcons} onClick={() => history.push(ExternalRoutes.DEVPOST, null)} />
         <Github className={styles.FooterSocialIcons} onClick={() => history.push(ExternalRoutes.GITHUB)} />
       </Col>

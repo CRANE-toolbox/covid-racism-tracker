@@ -32,13 +32,17 @@ export const PartnersPage: React.FC<Props> = () => {
       </Row>
       <Row justify="center" className={styles.ActionButtonsRow}>
         <Col>
-          <Button size="large" className={styles.ActionButton} onClick={() => {}}>
-            <strong> Download</strong>
+          <Button size="large" className={styles.ActionButton}>
+            <a href="https://github.com/CRANE-toolbox" target="_blank" rel="noopener noreferrer" style={{ margin: '0 auto' }}>
+              <strong> Download</strong>
+            </a>
           </Button>
         </Col>
         <Col>
-          <Button size="large" className={styles.ActionButton} onClick={() => {}}>
-            <strong> Contact</strong>
+          <Button size="large" className={styles.ActionButton}>
+            <a href="https://forms.gle/HMWqoNXVMoeWokXo7" target="_blank" rel="noopener noreferrer" style={{ margin: '0 auto' }}>
+              <strong>Contact</strong>
+            </a>
           </Button>
         </Col>
       </Row>

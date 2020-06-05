@@ -1,13 +1,11 @@
 import React from 'react';
 import { Row, Col, Button } from 'antd';
 import styles from '../styles/SupportPage.module.less';
-import { useHistory } from 'react-router-dom';
-import { Routes } from '../routes';
 import { ResourceCard, CardIcon } from '../components/ResourceCard';
+
 interface Props {}
 
 export const SupportPage: React.FC<Props> = () => {
-  let history = useHistory();
   return (
     <div>
       <div className={styles.SupportContainer}>
@@ -43,7 +41,7 @@ export const SupportPage: React.FC<Props> = () => {
                   groups.
                 </p>
                 <p>
-                  If you are in immediate danger, <strong>please call 911</strong>.
+                  If you are in immediate danger, <strong>please contact your local emergency services</strong>.
                 </p>
               </div>
             </Col>
@@ -52,20 +50,9 @@ export const SupportPage: React.FC<Props> = () => {
           <Row justify="center" className={styles.ActionButtonsRow}>
             <Col>
               <Button size="large" className={styles.ActionButtonLeft}>
-                <a href="tel:911" style={{ marginTop: 'auto' }}>
-                  Call 911 now
+                <a href="https://victimconnect.org/learn/types-of-crime/hate-crimes/" target="_blank" rel="noopener noreferrer" style={{ marginTop: 'auto' }}>
+                  Get Support Now
                 </a>
-              </Button>
-            </Col>
-            <Col>
-              <Button
-                size="large"
-                className={styles.ActionButtonRight}
-                onClick={() => {
-                  history.push(Routes.SUPPORT.path);
-                }}
-              >
-                Get Support
               </Button>
             </Col>
           </Row>
