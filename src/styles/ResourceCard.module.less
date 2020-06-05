@@ -1,0 +1,52 @@
+@import 'globalSettings.module.less';
+
+.CardStyle {
+    @media only screen and (max-width: @mobile-cutoff) {
+        width: 75vw;
+        height: fit-content;
+
+
+
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(13rem + 10vw);
+    min-height: fit-content;
+    vertical-align: top;
+    margin: 1em;
+}
+
+.CardTitle {
+    .body();
+    font-size: 1.56rem;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    text-align: center;
+
+}
+
+.CardBody {
+    .body();
+    text-align: center;
+}
+
+.CardLink {
+    .body();
+    text-align: center;
+    text-decoration: underline;
+    color: #292929;
+    padding: 1rem;
+
+}
+
+.CardLink:hover {
+
+    color: #616161
+}
+
+.CardIcon {
+    height: 4.125rem;
+}

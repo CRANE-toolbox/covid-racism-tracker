@@ -1,0 +1,95 @@
+@import 'globalSettings.module.less';
+
+.Title {
+    @media only screen and (max-width: @mobile-cutoff) {
+      margin-top: 15px;
+    }
+    text-align: center;
+    padding-top: 0;
+}
+
+.SubTitleContent {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.HelpContent{
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    background-color: #424c6e;
+}
+
+.SupportContainer {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.FlexRow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: top;
+    margin: 0;
+}
+
+.HelpSection {
+    background-color: #424c6e;
+    padding-top: 10px;
+    color: white;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.HereLink {
+    text-decoration: underline;
+}
+
+.HelpSubtitle {
+    color: white;
+}
+
+.MoreResources {
+    padding-top: 1.25rem;
+    padding-bottom: 0.625rem;
+    margin-top: 2.187rem;
+    margin-bottom: 2.81rem;
+    text-align: center;
+    background-color: #424c6e;
+    color: white;
+}
+
+.HighSectionText {
+  padding: 1rem;
+}
+
+.ActionButtonsRow > * {
+    padding: 2vw;
+}
+
+.ActionButtonLeft {
+  .ActionButton();
+  border-color: #424c6e;
+  color: #424c6e;
+  background-color: #ffca0f;
+}
+
+
+.SupportPageColumnContent > * {
+  @media only screen and (max-width: @mobile-cutoff) {
+    width: fit-content;
+  }
+  width: 50vw;
+  padding: 1vw;
+  text-align: center;
+}
+
+
+.CreditText { 
+  padding: 1rem;
+  font-size: 0.5rem;
+  color: #616161
+}

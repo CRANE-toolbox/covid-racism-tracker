@@ -1,0 +1,50 @@
+//@import '~antd/dist/antd.less'; // Import Ant Design styles by less entry
+@import 'globalSettings.module.less';
+
+.MasterLayout {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0;
+}
+
+.MasterContent {
+  flex-direction: column;
+  display: flex;
+  background-color: transparent;
+  padding-top: 3%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.MasterFooter {
+  background-color: #424c6e;
+  text-align: center;
+}
+
+.MasterFooterText {
+  color: #ffff
+}
+
+
+.MenuHeader {
+  width: 100%;
+  @media only screen and (max-width: @mobile-cutoff) {
+    padding: 1rem;
+  }
+  font-weight: 600;
+  padding: 2vmin;
+  padding-right: 5vw;
+  padding-bottom: 10vh;
+  align-items: right;
+  background-color: #fff;
+}
+.MenuCol {
+  position: absolute;
+  padding-right: 3rem;
+  right: 0;
+  align-items: right;
+}
+
+
+

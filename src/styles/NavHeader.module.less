@@ -1,0 +1,70 @@
+@import 'globalSettings.module.less';
+@color: '#99999';
+.MenuHeader {
+  width: 100%;
+  @media only screen and (max-width: @mobile-cutoff) {
+    padding: 1rem;
+  }
+  font-weight: 600;
+  padding: 2vmin;
+  padding-right: 5vw;
+  padding-bottom: 10vh;
+  align-items: right;
+  background-color: #fff;
+}
+.MenuCol {
+  position: absolute;
+  padding-right: 3rem;
+  right: 0;
+  align-items: right;
+}
+
+.MenuWrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+
+}
+
+.MenuBar {
+  // @media only screen and (max-width: @mobile-cutoff) {
+  //   font-size: @mobile-font-size;
+  //   padding: 1vw;
+  //   float: left;
+  //   display: block;
+  // }
+  padding-right: 5vw;
+  font-size: 1rem;
+  margin-left: auto;
+  width: min-content;
+}
+
+.MenuItem * {
+  margin: 100px;
+}
+
+.MenuRow {
+  align-items: center;
+}
+
+.Logo {
+  @media only screen and (max-width: @mobile-cutoff) {
+    display: none;
+  }
+  margin-left: 1vw;
+  width: calc(2rem + 3vw);
+  height: calc(3rem + 1.5vw);
+  //padding: 1rem;
+  margin-right: auto;
+  transition: all .2s ease-in-out;
+}
+
+.Logo:hover{
+  transform: scale(1.1);
+}
+
+.Logo:active {
+  position: relative;
+  top: 0.2vh;
+}

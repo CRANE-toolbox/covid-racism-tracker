@@ -1,0 +1,74 @@
+@mobile-cutoff: 800px;
+@mobile-font-size: 12px;
+
+
+
+//TODO: Change this h1 to something else?
+h1{
+    font-size: calc(1.8rem + 1vw);
+    font-weight:900;
+    font-family: 'Martel Sans';
+    align-content: center;
+  }
+
+h3{
+    font-size: 2rem;
+    font-family: 'Playfair Display', 'serif';
+}
+
+h5{
+    font-size: 1.75rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body{
+    font-size: (calc(1rem + 0.05vw));
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.body{
+    font-size: (calc(1rem + 0.1vw));
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.link{
+    color: #2162a2;
+    font-family: 'Montserrat', 'regular';
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.greyText{
+    color: #6c6c6c;
+    font-weight: 400;
+    font-family: 'Montserrat', 'regular';
+    font-size: 1.125rem;
+}
+
+
+.ActionButton {
+    @media only screen and (max-width: @mobile-cutoff) {
+      width: fit-content;
+      height: fit-content;
+      font-size: large;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    min-width: fit-content;
+    width: calc(6.5rem + 3vw);
+    height: calc((6.5rem + 3vw)/3);
+    font-weight: 500;
+    font-size: calc(1rem + 0.1vw);
+    color: #292929;
+    background-color: #ffca0f;
+  }
+
+
+.PageWrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}

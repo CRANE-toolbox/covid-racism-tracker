@@ -1,0 +1,72 @@
+@import 'globalSettings.module.less';
+
+.Title {
+    @media only screen and (max-width: @mobile-cutoff) {
+      margin-top: 15px;
+    }
+
+    text-align: center;
+    padding-top: 0;
+}
+
+.SubTitleContent {
+    text-align: center;
+}
+
+.AboutProfileInfo {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.MidTitle {
+    text-align: center;
+    padding: 25px;
+    padding-top: 50px;
+}
+
+.Content {
+    padding-right: 25px;
+}
+
+.SubTitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.AllRow {
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.SocialDistanceGraphic {
+    @media only screen and (max-width: @mobile-cutoff) {
+        width: 100%;
+        height: auto;
+    }
+    position: relative;
+    padding: 10px;
+    width: calc(14rem + 10vw);
+    height: auto;
+}
+
+.TeamProfileRow {
+    margin: 0 auto;
+    display: table;
+}
+
+.TeamContentSection {
+    text-align: center;
+}
+
+.DevpostButton {
+    .ActionButton();
+    margin: 2rem;
+    width: 13rem;
+    text-align: center;
+    vertical-align: middle;
+}

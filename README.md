@@ -3,9 +3,10 @@
 The "main" of this CRA is in App.tsx(even though this actually called on index.tsx you should not touch that one). `App.tsx` can either have a bunch of react components and JSX(like it does right now) or expert one or more react components that then handle the more specific parts of code.
 
 ### Deployment
-Deployment happens automatically via Github Actions when a push to master occurs. Changes are compiled then pushed to the hosting provider.
+Deployment happens automatically via Github Actions when a push to master occurs. Changes are compiled then pushed to the hosting provider. You can also do a manual build and publish if you have the 
+wrangler CLI installed using the following npm script `npm run site`.
 #### Staging Deployment
-In addition, there is a staging environment available via the following npm script `npm run staging` which pushes changes to `https://cobra-web-staging.iansaucy.workers.dev`. Alternatively changes can be pushed manually via `wrangler publish --env staging`
+In addition, there is a staging environment available via the following npm script `npm run staging` which pushes changes to `https://crane-staging.iansaucy.workers.dev`. Alternatively changes can be pushed manually via `wrangler publish --env staging`
 
 ### The charts
 in `src/charts` live a few react components, they're basically just wrappers on the `nivo.rocks` library that we're using for data visualization but their goal is to allow easy expansion in the future.
@@ -41,6 +42,9 @@ Awesome, a little bit easier but still requires the above setup. In place of act
 
 Well uh, I had not gotten this far. I'd recommend storing the text in variables similar to the way it is done for the graphs. Then dropping it directly into some styled `<div>` in `App.tsx`. You can also break it out further or built a react component to reuse if there is something you want for each text block etc.
 
+## Project Bootstrapping
+
+This projected was created with `create-react-app` with a typescript template. In addition, it uses the `ant` design library with `less` and `css-modules`. This was parially setup using the docs from `ant` and following [this](https://www.aleksandrhovhannisyan.com/blog/dev/how-to-set-up-react-typescript-ant-design-less-css-modules-and-eslint/) tutorial.
 
 ---
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

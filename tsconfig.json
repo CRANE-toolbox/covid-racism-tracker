@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
     "target": "es5",
     "lib": [
       "dom",
@@ -20,6 +25,6 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src", "src/global.d.ts"
   ]
 }

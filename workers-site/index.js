@@ -28,11 +28,27 @@ async function handleEvent(event) {
   const url = new URL(event.request.url)
   let options = {}
 
-  /**
-   * You can add custom logic to how we fetch your assets
-   * by configuring the function `mapRequestToAsset`
-   */
-  // options.mapRequestToAsset = handlePrefix(/^\/docs/)
+  options.mapRequestToAsset = req => {
+    // First let's apply the default handler, which we imported from
+    // '@cloudflare/kv-asset-handler' at the top of the file. We do
+    // this because the default handler already has logic to detect
+    // paths that should map to HTML files, for which it appends
+    // `/index.html` to the path.
+    req = mapRequestToAsset(req)
+
+    // Now we can detect if the default handler decided to map to
+    // index.html in some specific directory.
+    if (req.url.endsWith('/index.html')) {
+      // Indeed. Let's change it to instead map to the root `/index.html`.
+      // This avoids the need to do a redundant lookup that we know will
+      // fail.
+      return new Request(`${new URL(req.url).origin}/index.html`, req)
+    } else {
+      // The default handler decided this is not an HTML page. It's probably
+      // an image, CSS, or JS file. Leave it as-is.
+      return req
+    }
+  }
 
   try {
     if (DEBUG) {
@@ -43,18 +59,10 @@ async function handleEvent(event) {
     }
     return await getAssetFromKV(event, options)
   } catch (e) {
-    // if an error is thrown try to serve the asset at 404.html
-    if (!DEBUG) {
-      try {
-        let notFoundResponse = await getAssetFromKV(event, {
-          mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/404.html`, req),
-        })
-
-        return new Response(notFoundResponse.body, { ...notFoundResponse, status: 404 })
-      } catch (e) {}
-    }
-
-    return new Response(e.message || e.toString(), { status: 500 })
+    // Fall back to serving `/index.html` on errors.
+    return getAssetFromKV(event, {
+      mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/index.html`, req),
+    })
   }
 }
 
