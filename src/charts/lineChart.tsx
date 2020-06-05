@@ -1,6 +1,4 @@
 import { ResponsiveLine, Serie } from '@nivo/line';
-import { BasicTooltip } from '@nivo/tooltip';
-import PropTypes from 'prop-types';
 import React from 'react';
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and

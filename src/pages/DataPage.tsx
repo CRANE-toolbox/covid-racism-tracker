@@ -13,10 +13,7 @@ export const DataPage: React.FC<Props> = () => {
   return (
     <>
       <h1>Frequency of Sinophobic Slurs on Twitter</h1>
-      <body>
-        Project CRANE is monitoring real-time racist rhetoric on Twitter. There is evidence that online hate speech predicts hate crime and human rights groups have argued that
-        exposure to online hate speech normalises such hatred for majority groups.
-      </body>
+      <body>Project CRANE computes the daily and weekly frequencies of several known sinophobic slurs in a dataset representative of real-time Twitter data.</body>
       <Row gutter={[65, 65]} className={styles.FreqRow}>
         <Col>
           <GraphPreview
@@ -100,8 +97,8 @@ export const DataPage: React.FC<Props> = () => {
       </Row>
       <h1> Topics Linked to Specific Key Words </h1>
       <body>
-        Project CRANE is monitoring real-time racist rhetoric on Twitter. There is evidence that online hate speech predicts hate crime and human rights groups have argued that
-        exposure to online hate speech normalises such hatred for majority groups.
+        Project CRANE uses a word embedding algorithm to identify the words linked to a given keyword, for a given period of time. It reproduces this analysis for several keywords
+        (related to China, Covid19, and otherness) and for each month from Nov 2019 to Dec 2020.
       </body>
       <Row gutter={[65, 65]} className={styles.FreqRow}>
         <Col>

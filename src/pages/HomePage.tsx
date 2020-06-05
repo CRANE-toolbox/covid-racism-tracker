@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row, Col, Layout, Button } from 'antd';
 import styles from '../styles/HomePage.module.less';
-import { TwitterCircleFilled, LinkedinFilled, MailFilled } from '@ant-design/icons';
 import { useHistory } from 'react-router-dom';
 import { Routes, ExternalRoutes } from '../routes';
 import { CircleEmail, DevPost, Github } from '../assets/assets.index';

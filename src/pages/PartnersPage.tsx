@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col, Layout, Button } from 'antd';
 import styles from '../styles/PartnersPage.module.less';
-import { useHistory } from 'react-router-dom';
-import { Routes } from '../routes';
+
 interface Props {}
 
 export const PartnersPage: React.FC<Props> = () => {

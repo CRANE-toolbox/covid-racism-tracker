@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Layout, Menu, Row, Col } from 'antd';
 import styles from '../styles/NavHeader.module.less';
-import { useHistory, useRouteMatch, useLocation, Route } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { Routes } from '../routes';
 import { ReactComponent as Logo } from '../assets/LOGO.svg';
 interface Props {}
@@ -37,7 +37,7 @@ export const Header: React.FC<Props> = () => {
     } else if (location.pathname === Routes.PARTNERS.path) {
       setSelected([`${Routes.PARTNERS.key}`]);
     }
-  }, []);
+  }, [location.pathname]);
   return (
     <Layout.Header className={styles.MenuHeader}>
       <Row align="top">
