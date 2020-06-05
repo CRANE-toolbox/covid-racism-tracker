@@ -9,7 +9,11 @@ export const MainFooter: React.FC<Props> = () => {
     <Layout className={styles.FooterStyle}>
       <Row className={styles.FooterRow}>
         <Col className={styles.FooterText}></Col>
-        <Col className={styles.FooterText}>BRAND CONTENT AHHHH</Col>
+        <Col className={styles.FooterText}>
+          Disclaimer: the information on this website is for educational purposes
+          only. Users' privacy is our utmost concern. No identifiable information
+          has been made public.
+        </Col>
         <Col className={styles.FooterLogos}>
           <TwitterOutlined className={styles.FooterSocialIcons} />
           <LinkedinOutlined className={styles.FooterSocialIcons} />
