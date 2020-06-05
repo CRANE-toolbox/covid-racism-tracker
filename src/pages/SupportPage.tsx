@@ -93,7 +93,7 @@ export const SupportPage: React.FC<Props> = () => {
               and compassionately. They have a webpage full for resources for survivors
               of hate crimes.
             </p>
-            <p><a href="#">Learn More</a></p>
+            <p><a href="https://victimconnect.org/learn/types-of-crime/hate-crimes/" target="_blank">Learn More</a></p>
           </div>
         </Col>
         <Col className={styles.ResourceBox}>
@@ -107,7 +107,7 @@ export const SupportPage: React.FC<Props> = () => {
             campaigns and the development of model legislation and advocacy to end
             police violence nationwide.
             </p>
-            <p className={styles.LinkItem}><a href="#">Learn More</a></p>
+            <p className={styles.LinkItem}><a href="https://www.joincampaignzero.org/#vision" target="_blank">Learn More</a></p>
           </div>
         </Col>
         <Col className={styles.ResourceBox}>
@@ -120,7 +120,7 @@ export const SupportPage: React.FC<Props> = () => {
               and to build structural awareness of why those experiences are happening,
               and how they are tied to the oppression of others.
             </p>
-            <p><a href="#">Learn More</a></p>
+            <p><a href="https://www.asianamtoolkit.org/" target="_blank">Learn More</a></p>
           </div>
         </Col>
         <Col className={styles.ResourceBox}>
@@ -131,7 +131,7 @@ export const SupportPage: React.FC<Props> = () => {
               to show how many Asian Americans are being affected by hate speech and
               racism. Tell your story, track the hate.
             </p>
-            <p><a href="#">Learn More</a></p>
+            <p><a href="https://www.standagainsthatred.org/" target="_blank">Learn More</a></p>
           </div>
         </Col>
         <Col className={styles.ResourceBox}>
@@ -144,23 +144,19 @@ export const SupportPage: React.FC<Props> = () => {
               incidents, small business, and more specifically for the Asian American,
               Native Hawaiian, and Pacific Islander communities.
             </p>
-            <p><a href="#">Learn More</a></p>
+            <p><a href="https://www.aapiern.org/" target="_blank">Learn More</a></p>
           </div>
         </Col>
       </Row>
 
-
-      <Row justify="center">
-        <Col className={styles.SupportPageColumnContent}>
+      <Row justify="center" className={styles.MoreResources}>
+        <Col>
           <p>
-
             You can find more resources to help those affected by racism, hate
-            speech, and xenophobia here.
+            speech, and xenophobia <a href="#" className={styles.HereLink} target="_blank">here</a>.
           </p>
         </Col>
       </Row>
-
-
 
       <div className={styles.SupportContainer}>
         <Row>
@@ -199,7 +195,7 @@ export const SupportPage: React.FC<Props> = () => {
               Hollaback! has partnered with Asian Americans Advancing Justice (AAJC)
               to adapt their free bystander intervention and de-escalation training.
             </p>
-            <p><a href="#">Learn More</a></p>
+            <p><a href="https://www.ihollaback.org/bystanderintervention/" target="_blank">Learn More</a></p>
           </div>
         </Col>
         <Col className={styles.ResourceBox}>
@@ -211,7 +207,7 @@ export const SupportPage: React.FC<Props> = () => {
               place where those facing harassment can easily report abuse across social
               networks and find support from others who know what they're going through.
             </p>
-            <p><a href="#">Learn More</a></p>
+            <p><a href="https://iheartmob.org/" target="_blank">Learn More</a></p>
           </div>
         </Col>
         <Col className={styles.ResourceBox}>
@@ -223,7 +219,7 @@ export const SupportPage: React.FC<Props> = () => {
               help those being targered. Stay informed! Safe Horizon outlines the dimensions
               of hate speech and what concerned supporters should know!
             </p>
-            <p><a href="#">Learn More</a></p>
+            <p><a href="https://www.safehorizon.org/programs/help-hate-crime-victims/" target="_blank">Learn More</a></p>
           </div>
         </Col>
       </Row>
