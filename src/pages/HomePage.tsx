@@ -27,8 +27,7 @@ export const HomePage: React.FC<Props> = () => {
         <Col>
           <Button
             size="large"
-            autoFocus={true}
-            className={styles.ActionButton}
+            className={styles.ActionButtonData}
             onClick={() => {
               history.push(Routes.DATA);
             }}
@@ -39,7 +38,7 @@ export const HomePage: React.FC<Props> = () => {
         <Col>
           <Button
             size="large"
-            className={styles.ActionButton}
+            className={styles.ActionButtonSupport}
             onClick={() => {
               history.push(Routes.SUPPORT);
             }}
@@ -48,6 +47,7 @@ export const HomePage: React.FC<Props> = () => {
           </Button>
         </Col>
       </Row>
+      <div style={{ paddingTop: '3rem' }} />
       <Row justify="center" className={styles.SocialIconsRow}>
         <Col className={styles.HomeSocialIcons}>
           <CircleEmail onClick={() => history.push(ExternalRoutes.EMAILUS)} />
