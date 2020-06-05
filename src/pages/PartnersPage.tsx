@@ -6,18 +6,17 @@ interface Props {}
 
 export const PartnersPage: React.FC<Props> = () => {
   return (
-    <Layout.Content>
-      <Row justify="center">
-        <Col className={styles.PartnersPageColumnContent}>
-          <h1 className={styles.h1}>For Organizations and Partners</h1>
+
+    <div className={styles.PageWrapper}>
+      <Row>
+        <Col span={24} className={styles.Title}>
+          <h1>For Organizations and Partners</h1>
         </Col>
       </Row>
-      <Row justify="center">
-        <Col className={styles.PartnersPageColumnContent}>
-          <body>
-            <p>
-              <strong>What can you do with this data?</strong>
-            </p>
+      <Row>
+        <Col span={24}>
+          <body className={styles.SubTitleContent}>
+            <p><strong>What can you do with this data?</strong></p>
             <p>
               There are many nonprofits and social impact enterprises in existence fighting to combat the spread of hate speech and provide support to those targeted. This data
               does more than provide evidence for sinophobic and xenophobic outbursts in response to the Coronavirus pandemic; it can help organizations see who is being directly
@@ -46,6 +45,6 @@ export const PartnersPage: React.FC<Props> = () => {
           </Button>
         </Col>
       </Row>
-    </Layout.Content>
+    </div>
   );
 };

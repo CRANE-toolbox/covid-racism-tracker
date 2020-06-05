@@ -107,7 +107,7 @@ export const SupportPage: React.FC<Props> = () => {
         <Col>
           <ResourceCard
             Icon={CardIcon.FIRSTAID}
-            body="The AAPI Emergency Response Network (ERN), born out of a collaboration between the National Council of Asian Pacific Americans (NCAPA) and other non-profit groups, is a compilation of resources on health,\
+            body="The AAPI Emergency Response Network (ERN), born out of a collaboration between the National Council of Asian Pacific Americans (NCAPA) and other non-profit groups, is a compilation of resources on health,
              hate incidents, small business, and more specifically for the Asian American, Native Hawaiian, and Pacific Islander communities."
             title="AAPI EMERGENCY RESPONSE NETWORK"
             linkText="Learn More"
