@@ -29,7 +29,7 @@ export const HomePage: React.FC<Props> = () => {
             size="large"
             className={styles.ActionButtonData}
             onClick={() => {
-              history.push(Routes.DATA);
+              history.push(Routes.DATA.path);
             }}
           >
             See Data
@@ -40,7 +40,7 @@ export const HomePage: React.FC<Props> = () => {
             size="large"
             className={styles.ActionButtonSupport}
             onClick={() => {
-              history.push(Routes.SUPPORT);
+              history.push(Routes.SUPPORT.path);
             }}
           >
             Get Support

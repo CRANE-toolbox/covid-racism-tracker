@@ -63,7 +63,7 @@ export const Main: React.FC<Props> = () => {
         </Switch>
       </Layout.Content>
       {/* Don't render the footer on the home page */}
-      {location.pathname === Routes.HOME ? null : renderFooterHelper()}
+      {location.pathname === Routes.HOME.path ? null : renderFooterHelper()}
     </Layout>
   );
 };
