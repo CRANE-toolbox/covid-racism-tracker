@@ -16,6 +16,7 @@ interface Props {
   hoverText?: string;
   hoverColor?: COLORS;
   downloadLink?: string;
+  displayCTA?: boolean;
 }
 
 export const GraphPreview: React.FC<Props> = (props: Props) => {
@@ -49,21 +50,23 @@ export const GraphPreview: React.FC<Props> = (props: Props) => {
 };
 
 const ModalContent: React.FC<Props> = (props: Props) => {
-  const { modalTitle, textContent, graph } = props;
+  const { modalTitle, textContent, graph, displayCTA } = props;
   let history = useHistory();
   return (
     <div className={styles.ModalContentWrapper}>
       <h1 className={styles.ModalTitle}>{modalTitle}</h1>
       {graph}
       <body>{textContent}</body>
-      <Button
-        className={styles.ActionButton}
-        onClick={() => {
-          history.push(ExternalRoutes.GITHUB);
-        }}
-      >
-        Access our research Repo
-      </Button>
+      {displayCTA ? (
+        <Button
+          className={styles.ActionButton}
+          onClick={() => {
+            history.push(ExternalRoutes.GITHUB);
+          }}
+        >
+          Access our research Repo
+        </Button>
+      ) : null}
     </div>
   );
 };

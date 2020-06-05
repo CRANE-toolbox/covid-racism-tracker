@@ -4,7 +4,7 @@ import styles from '../styles/AboutPage.module.less';
 import { ReactComponent as Distance } from '../assets/social_distancing.svg';
 import { UserProfile } from '../components/userProfile';
 import { MemberProfile } from '../components/teamMember';
-import { ianProfile, gianlucaProfile, cameliaProfile, rachaelProfile, svetlanaProfile, linaProfile, kellyProfile } from '../assets/assets.index';
+import { ianProfile, gianlucaProfile, cameliaProfile, rachaelProfile, svetlanaProfile, linaProfile, kellyProfile, emmaProfile } from '../assets/assets.index';
 import { useHistory } from 'react-router-dom';
 import { ExternalRoutes } from '../routes';
 interface Props {}
@@ -119,12 +119,7 @@ export const AboutPage: React.FC<Props> = () => {
           </Col>
 
           <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
-            <MemberProfile
-              name="Svetlana M"
-              position="UI/UX"
-              bio="Passionate about learning and teaching, UX UI designer, linguist, copywriter and translator"
-              photo={svetlanaProfile}
-            />
+            <MemberProfile name="Svetlana M" position="UI/UX" bio="Passionate about learning & teaching, UX UI designer, linguist and  copywriter" photo={svetlanaProfile} />
           </Col>
           <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
             <MemberProfile name="Lina Hayek" position="Design Consultant" bio="Design & Communication Strategy" photo={linaProfile} />
@@ -136,6 +131,14 @@ export const AboutPage: React.FC<Props> = () => {
               position="Undergraduate Programmer & Researcher"
               bio="I worked on data collection, data analysis, website styling, and video editing"
               photo={kellyProfile}
+            />
+          </Col>
+          <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
+            <MemberProfile
+              name="Emma Barme"
+              position="Computer Science Research & Implementation"
+              bio="Literature review, data preprocessing, quantitative and qualitative analysis"
+              photo={emmaProfile}
             />
           </Col>
         </Row>

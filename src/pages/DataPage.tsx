@@ -72,6 +72,7 @@ export const DataPage: React.FC<Props> = () => {
         <Col>
           <GraphPreview
             modalTitle="How is CRANE computing the frequency of sinophobic slurs?"
+            displayCTA={true}
             title="Methods"
             textContent={
               'The dataset contains dated tweets. For each tweet, the text is searched for each slur in the provided list. Counts are aggregated by day (respectively week) then divided by the dataset total number of tweets from that day (resp. week) to obtain the frequency. This analysis is run in Python.'
@@ -363,6 +364,7 @@ export const DataPage: React.FC<Props> = () => {
           <GraphPreview
             modalTitle="How is CRANE computing evolution of topics linked to specific keywords?"
             title="Methods"
+            displayCTA={true}
             textContent={
               'The dataset is split into monthly datasets. Each monthly dataset is used to train a word embedding model through the word2vec algorithm. A list of keywords is provided to all the models. For each keyword, forty words are extracted: they are those used in a context the most similar to that of the given keyword. The words are then topic coded by humans. This analysis is run in Python (preprocessing) and C (word2vec).'
             }

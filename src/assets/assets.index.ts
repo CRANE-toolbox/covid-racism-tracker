@@ -8,6 +8,7 @@ export { default as svetlanaProfile } from './profilePhotos/svetlana_profile.jpg
 export { default as linaProfile } from './profilePhotos/lina_profile.jpg';
 export { default as kellyProfile } from './profilePhotos/kelly_profile.jpg';
 export { default as gianlucaProfile } from './profilePhotos/gianluca_profile.jpg';
+export { default as emmaProfile } from './profilePhotos/emma_profile.jpg';
 
 /**
  * Social Icons

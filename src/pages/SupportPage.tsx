@@ -195,6 +195,7 @@ export const SupportPage: React.FC<Props> = () => {
         </Col>
       </Row>
       <div style={{ marginBottom: '3rem' }} />
+      <div className={styles.CreditText}>Icons made by Freepik from www.flaticon.com</div>
     </div>
   );
 };
