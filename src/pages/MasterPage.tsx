@@ -3,7 +3,7 @@ import { Layout } from 'antd';
 import { Header } from '../components/NavHeader';
 import styles from '../styles/MasterPage.module.less';
 import { HomePage } from './HomePage';
-import { Route, Switch, useLocation } from 'react-router-dom';
+import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
 import { DataPage } from './DataPage';
 import { Page404 } from './404Page';
 import { SupportPage } from './SupportPage';
@@ -24,9 +24,12 @@ function renderFooterHelper() {
 
 export const Main: React.FC<Props> = () => {
   let location = useLocation();
+  let history = useHistory();
   return (
     <Layout className={styles.MasterLayout}>
-      <Header />
+      <Layout.Header className={styles.MenuHeader}>
+        <Header />
+      </Layout.Header>
       <Layout.Content className={styles.MasterContent}>
         <Switch>
           <Route exact path="/" component={HomePage} />
@@ -38,7 +41,8 @@ export const Main: React.FC<Props> = () => {
             exact
             path="/redirect/github"
             component={() => {
-              window.location.assign('https://github.com/CRANE-toolbox');
+              window.open('https://github.com/CRANE-toolbox');
+              history.goBack();
               return null;
             }}
           />
@@ -46,7 +50,8 @@ export const Main: React.FC<Props> = () => {
             exact
             path="/redirect/devpost"
             component={() => {
-              window.location.assign('https://devpost.com/software/crane-dvkeuf');
+              window.open('https://devpost.com/software/crane-dvkeuf');
+              history.goBack();
               return null;
             }}
           />
@@ -54,7 +59,8 @@ export const Main: React.FC<Props> = () => {
             exact
             path="/redirect/emailus"
             component={() => {
-              window.location.assign('mailto:someone@yoursite.com');
+              window.open('mailto:someone@yoursite.com');
+              history.goBack();
               return null;
             }}
           />

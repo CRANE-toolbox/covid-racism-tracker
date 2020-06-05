@@ -33,7 +33,13 @@ export { ReactComponent as LineGraphImg } from './components/graph-line.svg';
 export { ReactComponent as CircleClose } from './components/circle-close.svg';
 export { ReactComponent as SinglePersonImg } from './components/single_person.svg';
 export { ReactComponent as DuelPersonImg } from './components/duel_person.svg';
-export { ReactComponent as DoubleOrbImg } from './components/double_orb.svg';
+export { ReactComponent as FirstAidImg } from './components/firstaid_kit.svg';
+export { ReactComponent as FistImg } from './components/fist.svg';
+export { ReactComponent as HandTogetherImg } from './components/hands_together.svg';
+export { ReactComponent as HeartMobImg } from './components/heart_mob.svg';
+export { ReactComponent as SafeHorizonImg } from './components/safe_horizon.svg';
+export { ReactComponent as ChartStatsImg } from './components/stats_chart.svg';
+export { ReactComponent as ToolBoxImg } from './components/toolbox.svg';
 
 /**
  * Random
