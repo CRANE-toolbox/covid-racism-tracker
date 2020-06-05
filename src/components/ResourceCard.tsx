@@ -1,5 +1,5 @@
 import React from 'react';
-import { SinglePersonImg, DuelPersonImg, DoubleOrbImg } from '../assets/assets.index';
+import { FirstAidImg, FistImg, HandTogetherImg, HeartMobImg, SafeHorizonImg, ChartStatsImg, ToolBoxImg } from '../assets/assets.index';
 import styles from '../styles/ResourceCard.module.less';
 
 interface Props {
@@ -13,7 +13,7 @@ export const ResourceCard: React.FC<Props> = (props: Props) => {
   const { Icon, title, body, linkText, link } = props;
   return (
     <div className={styles.CardStyle}>
-      <Icon />
+      <Icon className={styles.CardIcon} />
       <div className={styles.CardTitle}>{title}</div>
       <body className={styles.CardBody}>{body}</body>
       <a href={link} className={styles.CardLink}>
@@ -24,7 +24,11 @@ export const ResourceCard: React.FC<Props> = (props: Props) => {
 };
 
 export const CardIcon = {
-  PERSON: SinglePersonImg,
-  DUELPERSON: DuelPersonImg,
-  ORB: DoubleOrbImg,
+  FIRSTAID: FirstAidImg,
+  FIST: FistImg,
+  HANDSTOGETHER: HandTogetherImg,
+  HEART: HeartMobImg,
+  SAFEHORIZON: SafeHorizonImg,
+  STATS: ChartStatsImg,
+  TOOLBOX: ToolBoxImg,
 } as const;

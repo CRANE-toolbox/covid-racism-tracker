@@ -39,24 +39,22 @@ export const SupportPage: React.FC<Props> = () => {
               <div className={styles.HelpContent}>
                 <p>
                   If you have been a target of hate speech, racism, and/or xenophobia online or in-person following the Coronavirus pandemic, you are not alone. Many are being
-                  harassed in response to COVID-19 based off their ethnicity and race. Below are a list of resouces, including hotlines, virtual support systems, and outreach groups.
+                  harassed in response to COVID-19 based off their ethnicity and race. Below are a list of resouces, including hotlines, virtual support systems, and outreach
+                  groups.
                 </p>
-                <p>If you are in immediate danger, <strong>please call 911</strong>.</p>
+                <p>
+                  If you are in immediate danger, <strong>please call 911</strong>.
+                </p>
               </div>
             </Col>
           </Row>
 
           <Row justify="center" className={styles.ActionButtonsRow}>
             <Col>
-              <Button
-                size="large"
-                autoFocus={true}
-                className={styles.ActionButtonLeft}
-                onClick={() => {
-                  history.push(Routes.DATA.path);
-                }}
-              >
-                Call 911 now
+              <Button size="large" className={styles.ActionButtonLeft}>
+                <a href="tel:911" style={{ marginTop: 'auto' }}>
+                  Call 911 now
+                </a>
               </Button>
             </Col>
             <Col>
@@ -83,7 +81,7 @@ export const SupportPage: React.FC<Props> = () => {
       <Row className={styles.FlexRow}>
         <Col>
           <ResourceCard
-            Icon={CardIcon.ORB}
+            Icon={CardIcon.FIST}
             body="The VictimConnect Resource Center is a referral helpline where crime victims can learn about their rights and options confidentially and compassionately. They have a webpage full for resources for survivors of hate crimes."
             title="VICTIM CONNECT"
             linkText="Learn More"
@@ -92,7 +90,7 @@ export const SupportPage: React.FC<Props> = () => {
         </Col>
         <Col>
           <ResourceCard
-            Icon={CardIcon.ORB}
+            Icon={CardIcon.FIST}
             body="Campaign Zero is a digital activist group fighting against police brutality. Funds donated to Campaign Zero support the analysis of policing practices across the country, research to identify effective solutions to end police violence, technical assistance to organizers
             leading police accountability campaigns and the development of model legislation and advocacy to end police violence nationwide."
             title="CAMPAIGN ZERO"
@@ -102,7 +100,7 @@ export const SupportPage: React.FC<Props> = () => {
         </Col>
         <Col>
           <ResourceCard
-            Icon={CardIcon.PERSON}
+            Icon={CardIcon.TOOLBOX}
             body="This toolkit represents the work and thinking of 15 grassroots organizations with Asian American bases living in the most precarious margins of power. All of the modules are designed to begin with people’s
              lived experiences, and to build structural awareness of why those experiences are happening, and how they are tied to the oppression of others."
             title="ASIAN AMERICAN TOOLKIT"
@@ -112,7 +110,7 @@ export const SupportPage: React.FC<Props> = () => {
         </Col>
         <Col>
           <ResourceCard
-            Icon={CardIcon.PERSON}
+            Icon={CardIcon.STATS}
             body="Asian Americans Advancing Justice (AAJC) has created a digital tracker to show how many Asian Americans are being affected by hate speech and racism. Tell your story, track the hate."
             title="STAND AGAINST HATRED TRACKER"
             linkText="Learn More"
@@ -121,7 +119,7 @@ export const SupportPage: React.FC<Props> = () => {
         </Col>
         <Col>
           <ResourceCard
-            Icon={CardIcon.PERSON}
+            Icon={CardIcon.FIRSTAID}
             body="The AAPI Emergency Response Network (ERN), born out of a collaboration between the National Council of Asian Pacific Americans (NCAPA) and other non-profit groups, is a compilation of resources on health,\
              hate incidents, small business, and more specifically for the Asian American, Native Hawaiian, and Pacific Islander communities."
             title="AAPI EMERGENCY RESPONSE NETWORK"
@@ -133,12 +131,11 @@ export const SupportPage: React.FC<Props> = () => {
 
       <Row justify="center" className={styles.MoreResources}>
         <Col>
-          <p>
+          <p className={styles.HighSectionText}>
             You can find more resources to help those affected by racism, hate speech, and xenophobia{' '}
             <a href="https://advancingjustice-aajc.org/covid19" className={styles.HereLink} target="_blank" rel="noreferrer noopener">
               here
             </a>
-            .
           </p>
         </Col>
       </Row>
@@ -171,7 +168,7 @@ export const SupportPage: React.FC<Props> = () => {
       <Row className={styles.FlexRow}>
         <Col>
           <ResourceCard
-            Icon={CardIcon.DUELPERSON}
+            Icon={CardIcon.HANDSTOGETHER}
             body="In response to the rise in Anti-Asian/American and xenophobic harassment, Hollaback!
             has partnered with Asian Americans Advancing Justice (AAJC) to adapt their free bystander intervention and de-escalation training."
             title="BYSTANDER INTERVENTION TRAINING"
@@ -180,7 +177,7 @@ export const SupportPage: React.FC<Props> = () => {
         </Col>
         <Col>
           <ResourceCard
-            Icon={CardIcon.PERSON}
+            Icon={CardIcon.HEART}
             body="We’re fighting fire with water, and working step by step to assist victims, educate communities, and stop harassment online. HeartMob aims to be the place where
             those facing harassment can easily report abuse across social networks and find support from others who know what they're going through "
             title="HEART MOB"
@@ -189,14 +186,15 @@ export const SupportPage: React.FC<Props> = () => {
         </Col>
         <Col>
           <ResourceCard
-            Icon={CardIcon.PERSON}
-            body="Learn how to help survivors of hate crime. When we as a society become more aware of the rise in hate speech and the resources available,
+            Icon={CardIcon.SAFEHORIZON}
+            body="Learn how to SA survivors of hate crime. When we as a society become more aware of the rise in hate speech and the resources available,
             we can help those being targeted. Stay informed! Safe Horizon outlines the dimensions of hate speech and what concerned supporters should know!"
             title="SAFE HORIZON"
             linkText="Learn More"
           />
         </Col>
       </Row>
+      <div style={{ marginBottom: '3rem' }} />
     </div>
   );
 };
