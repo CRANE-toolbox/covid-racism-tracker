@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from '../styles/graphPreview.module.less';
 import useHover from '@react-hook/hover';
 import { useHistory } from 'react-router-dom';
@@ -18,12 +18,10 @@ interface Props {
   downloadLink?: string;
 }
 
-
 export const GraphPreview: React.FC<Props> = (props: Props) => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const target = React.useRef(null);
   const isHovering = useHover(target);
-  const [state, setState] = useState(0);
 
   const modalStyle = {
     width: '100%',
@@ -52,18 +50,18 @@ export const GraphPreview: React.FC<Props> = (props: Props) => {
 
 const ModalContent: React.FC<Props> = (props: Props) => {
   const { modalTitle, textContent, graph } = props;
-  const [state, setState] = useState(0);
-  useEffect(() => {
-    console.log('Hit');
-    setState(1);
-  });
   let history = useHistory();
   return (
     <div className={styles.ModalContentWrapper}>
       <h1 className={styles.ModalTitle}>{modalTitle}</h1>
       {graph}
       <body>{textContent}</body>
-      <Button className={styles.ActionButton} onClick={() => {setState(1); history.push(ExternalRoutes.GITHUB)}}>
+      <Button
+        className={styles.ActionButton}
+        onClick={() => {
+          history.push(ExternalRoutes.GITHUB);
+        }}
+      >
         Access our research Repo
       </Button>
     </div>
