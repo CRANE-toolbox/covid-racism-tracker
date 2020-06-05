@@ -25,7 +25,7 @@ export const PartnersPage: React.FC<Props> = () => {
             </p>
             <p>
               It provides quantitative and qualitative backing for your claims. Proof that there are more ramifications than purely biological ones from this disease. This data
-              gives you the what, allowing you to give motivations to your why.
+              gives you the <em>what</em>, allowing you to give motivations to your <em>why</em>.
             </p>
           </body>
         </Col>
