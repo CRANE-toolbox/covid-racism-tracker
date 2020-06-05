@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GraphPreview, GraphType } from '../components/graphPreview';
 import { COLORS } from '../styles/colors';
 import { ChartWithTitle } from '../components/ChartWithTitles';
@@ -22,12 +22,42 @@ import {
 } from '../resources/data';
 import { Row, Col } from 'antd';
 import styles from '../styles/DataPage.module.less';
+import { isChrome, isChromium, isFirefox } from 'react-device-detect';
+import Modal from 'antd/lib/modal/Modal';
 
 interface Props {}
+
+const WarningModal = () => {
+  const [isVisible, setVisible] = useState(true);
+  return (
+    <Modal visible={isVisible} title="Browser Warning" closable={true} centered={true} onCancel={() => setVisible(false)} footer={null}>
+      <body>For the best experience browsing these graphs we recommend using a Chrome or Firefox based browser on a desktop computer. </body>{' '}
+      <body> There are known bugs when rendering the graphs for Safari based browsers, we hope to fix these in the future!</body>
+      {/* We set the state now that the component has been rendered */}
+      {setVisited()}
+    </Modal>
+  );
+};
+/**
+ * Two functions to help with setting the local storage.
+ * Enables us to only display the warning modal a single time
+ */
+
+function hasVisited(): boolean {
+  console.log('reading state');
+  let visited: boolean = localStorage['hasVisited'];
+  return visited;
+}
+
+function setVisited() {
+  console.log('Writing state');
+  localStorage['hasVisited'] = true;
+}
 
 export const DataPage: React.FC<Props> = () => {
   return (
     <div className={styles.PageWrapper}>
+      {!(isChrome || isChromium || isFirefox) && !hasVisited() ? <WarningModal /> : null}
       <h1>Frequency of Sinophobic Slurs on Twitter</h1>
       <body>Project CRANE computes the daily and weekly frequencies of several known sinophobic slurs in a dataset representative of real-time Twitter data.</body>
       <Row gutter={[65, 65]} className={styles.FreqRow}>
