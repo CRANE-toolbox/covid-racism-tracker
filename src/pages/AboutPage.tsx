@@ -12,7 +12,7 @@ interface Props {}
 export const AboutPage: React.FC<Props> = () => {
   let history = useHistory();
   return (
-    <div>
+    <div className={styles.PageWrapper}>
       <Row>
         <Col span={24} className={styles.Title}>
           <h1>About Project CoBRa</h1>
