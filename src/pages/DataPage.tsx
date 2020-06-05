@@ -44,13 +44,11 @@ const WarningModal = () => {
  */
 
 function hasVisited(): boolean {
-  console.log('reading state');
   let visited: boolean = localStorage['hasVisited'];
   return visited;
 }
 
 function setVisited() {
-  console.log('Writing state');
   localStorage['hasVisited'] = true;
 }
 
