@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/graphPreview.module.less';
 import useHover from '@react-hook/hover';
+import { useHistory } from 'react-router-dom';
+import { ExternalRoutes } from '../routes';
 import { COLORS } from '../styles/colors';
 import { Modal, Button } from 'antd';
 import { CircleClose, FlowGraphImg, LineGraphImg } from '../assets/assets.index';
@@ -15,6 +17,7 @@ interface Props {
   hoverColor?: COLORS;
   downloadLink?: string;
 }
+
 
 export const GraphPreview: React.FC<Props> = (props: Props) => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -54,12 +57,13 @@ const ModalContent: React.FC<Props> = (props: Props) => {
     console.log('Hit');
     setState(1);
   });
+  let history = useHistory();
   return (
     <div className={styles.ModalContentWrapper}>
       <h1 className={styles.ModalTitle}>{modalTitle}</h1>
       {graph}
       <body>{textContent}</body>
-      <Button className={styles.ActionButton} onClick={() => setState(1)}>
+      <Button className={styles.ActionButton} onClick={() => {setState(1); history.push(ExternalRoutes.GITHUB)}}>
         Access our research Repo
       </Button>
     </div>

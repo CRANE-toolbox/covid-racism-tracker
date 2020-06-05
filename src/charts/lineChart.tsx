@@ -86,7 +86,7 @@ export const BasicChart = (props: props) => (
     }}
     yFormat="0.4%"
     axisLeft={{
-      legend: 'Percent of English original tweets containing the slur',
+      legend: 'Percent of tweets containing the slur',
       legendPosition: 'middle',
       legendOffset: -85,
       format: (value) => `${(Number(value) * 1000000) / 10000}%`, // Weird multiplication-division tip to avoid imprecise decimals
