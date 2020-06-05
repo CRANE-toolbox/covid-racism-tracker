@@ -83,62 +83,72 @@ export const SupportPage: React.FC<Props> = () => {
           <h1 className={styles.h1}>Survivor Resources</h1>
         </Col>
       </Row>
-      <Row gutter={[65, 65]} className={styles.FreqRow}>
+
+      <Row gutter={[65, 65]} className={styles.FlexRow}>
         <Col className={styles.ResourceBox}>
           <p className={styles.ResourceTitle}>Victim Connect</p>
-          <p className={styles.ResourceContent}>
-            The VictimConnect Resource Center is a referral helpline
-            where crime victims can learn about their rights and options confidentially
-            and compassionately. They have a webpage full for resources for survivors
-            of hate crimes.
-          </p>
-          <p className={styles.ResourceContent}>Learn More</p>
+          <div className={styles.ResourceContent}>
+            <p>
+              The VictimConnect Resource Center is a referral helpline
+              where crime victims can learn about their rights and options confidentially
+              and compassionately. They have a webpage full for resources for survivors
+              of hate crimes.
+            </p>
+            <p><a href="#">Learn More</a></p>
+          </div>
         </Col>
         <Col className={styles.ResourceBox}>
           <p className={styles.ResourceTitle}>Campaign Zero</p>
-          <p className={styles.ResourceContent}>
+          <div className={styles.ResourceContent}>
+            <p>
             Campaign Zero is a digital activist group fighting against police brutality.
             Funds donated to Campaign Zero support the analysis of policing practices
             across the country, research to identify effective solutions to end police
             violence, technical assistance to organizers leading police accountability
             campaigns and the development of model legislation and advocacy to end
             police violence nationwide.
-          </p>
-          <p className={styles.ResourceContent}>Learn More</p>
+            </p>
+            <p className={styles.LinkItem}><a href="#">Learn More</a></p>
+          </div>
         </Col>
         <Col className={styles.ResourceBox}>
           <p className={styles.ResourceTitle}>Asian American Toolkit</p>
-          <p className={styles.ResourceContent}>
-            This toolkit represents the work and thinking of 15 grassroots organizations
-            with Asian American bases living in the most precarious margins of power.
-            All of the modules are designed to begin with people’s lived experiences,
-            and to build structural awareness of why those experiences are happening,
-            and how they are tied to the oppression of others.
-          </p>
-          <p className={styles.ResourceContent}>Learn More</p>
+          <div className={styles.ResourceContent}>
+            <p>
+              This toolkit represents the work and thinking of 15 grassroots organizations
+              with Asian American bases living in the most precarious margins of power.
+              All of the modules are designed to begin with people’s lived experiences,
+              and to build structural awareness of why those experiences are happening,
+              and how they are tied to the oppression of others.
+            </p>
+            <p><a href="#">Learn More</a></p>
+          </div>
         </Col>
         <Col className={styles.ResourceBox}>
           <p className={styles.ResourceTitle}>Stand Against Hatred Tracker</p>
-          <p className={styles.ResourceContent}>
-            Asian Americans Advancing Justice (AAJC) has created a digital tracker
-            to show how many Asian Americans are being affected by hate speech and
-            racism. Tell your story, track the hate.
-          </p>
-          <p className={styles.ResourceContent}>Learn More</p>
+          <div className={styles.ResourceContent}>
+            <p>
+              Asian Americans Advancing Justice (AAJC) has created a digital tracker
+              to show how many Asian Americans are being affected by hate speech and
+              racism. Tell your story, track the hate.
+            </p>
+            <p><a href="#">Learn More</a></p>
+          </div>
         </Col>
         <Col className={styles.ResourceBox}>
           <p className={styles.ResourceTitle}>AAPI Emergency Response network</p>
-          <p className={styles.ResourceContent}>
-            The AAPI Emergency Response Network (ERN), born out of a collaboration
-            between the National Council of Asian Pacific Americans (NCAPA) and
-            other non-profit groups, is a compilation of resources on health, hate
-            incidents, small business, and more specifically for the Asian American,
-            Native Hawaiian, and Pacific Islander communities.
-          </p>
-          <p className={styles.ResourceContent}>Learn More</p>
+          <div className={styles.ResourceContent}>
+            <p>
+              The AAPI Emergency Response Network (ERN), born out of a collaboration
+              between the National Council of Asian Pacific Americans (NCAPA) and
+              other non-profit groups, is a compilation of resources on health, hate
+              incidents, small business, and more specifically for the Asian American,
+              Native Hawaiian, and Pacific Islander communities.
+            </p>
+            <p><a href="#">Learn More</a></p>
+          </div>
         </Col>
       </Row>
-
 
 
       <Row justify="center">
@@ -176,44 +186,48 @@ export const SupportPage: React.FC<Props> = () => {
         </Row>
       </div>
 
-
       <Row justify="center">
         <Col className={styles.SupportPageColumnContent}>
           <h1 className={styles.h1}>Bystander Resources</h1>
         </Col>
       </Row>
-      <Row gutter={[65, 65]} className={styles.FreqRow}>
+      <Row className={styles.FlexRow}>
         <Col className={styles.ResourceBox}>
           <p className={styles.ResourceTitle}>Bystander Intervention Training</p>
-          <p className={styles.ResourceContent}>
-            In response to the rise in Anti-Asian/American and xenophobic harassment,
-            Hollaback! has partnered with Asian Americans Advancing Justice (AAJC)
-            to adapt their free bystander intervention and de-escalation training.
-          </p>
-          <p className={styles.ResourceContent}>Hert Mob</p>
+          <div className={styles.ResourceContent}>
+            <p>
+              In response to the rise in Anti-Asian/American and xenophobic harassment,
+              Hollaback! has partnered with Asian Americans Advancing Justice (AAJC)
+              to adapt their free bystander intervention and de-escalation training.
+            </p>
+            <p><a href="#">Learn More</a></p>
+          </div>
         </Col>
         <Col className={styles.ResourceBox}>
-          <p className={styles.ResourceTitle}>Campaign Zero</p>
-          <p className={styles.ResourceContent}>
-            We’re fighting fire with water, and working step by step to assist victims,
-            educate communities, and stop harassment online. HeartMob aims to be the
-            place where those facing harassment can easily report abuse across social
-            networks and find support from others who know what they're going through.
-          </p>
-          <p className={styles.ResourceContent}>Learn More</p>
+          <p className={styles.ResourceTitle}>Heart Mob</p>
+          <div className={styles.ResourceContent}>
+            <p>
+              We’re fighting fire with water, and working step by step to assist victims,
+              educate communities, and stop harassment online. HeartMob aims to be the
+              place where those facing harassment can easily report abuse across social
+              networks and find support from others who know what they're going through.
+            </p>
+            <p><a href="#">Learn More</a></p>
+          </div>
         </Col>
         <Col className={styles.ResourceBox}>
-          <p className={styles.ResourceTitle}>SafeHorizon</p>
-          <p className={styles.ResourceContent}>
-            Learn how to help survivors of hate crime. When we as a society become
-            more aware of the rise in hate speech and the resouces available, we can
-            help those being targered. Stay informed! Safe Horizon outlines the dimensions
-            of hate speech and what concerned supporters should know!
-          </p>
-          <p className={styles.ResourceContent}>Learn More</p>
+          <p className={styles.ResourceTitle}>Safe Horizon</p>
+          <div className={styles.ResourceContent}>
+            <p>
+              Learn how to help survivors of hate crime. When we as a society become
+              more aware of the rise in hate speech and the resouces available, we can
+              help those being targered. Stay informed! Safe Horizon outlines the dimensions
+              of hate speech and what concerned supporters should know!
+            </p>
+            <p><a href="#">Learn More</a></p>
+          </div>
         </Col>
       </Row>
-
 
       <Table dataSource={dataSource} columns={columns} bordered={false}/>;
 
