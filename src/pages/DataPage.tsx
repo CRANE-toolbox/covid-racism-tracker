@@ -15,7 +15,7 @@ interface Props {}
 export const DataPage: React.FC<Props> = () => {
   return (
     <>
-      <h1>Frequency of Sinophobic Slurs on Twitter</h1>
+      <h1 className={styles.Title}>Frequency of Sinophobic Slurs on Twitter</h1>
       <body>Project CRANE computes the daily and weekly frequencies of several known sinophobic slurs in a dataset representative of real-time Twitter data.</body>
       <Row gutter={[65, 65]} className={styles.FreqRow}>
         <Col>
