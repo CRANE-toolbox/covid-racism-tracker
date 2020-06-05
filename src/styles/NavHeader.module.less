@@ -19,18 +19,25 @@
   align-items: right;
 }
 
+.MenuWrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+
+}
+
 .MenuBar {
-  @media only screen and (max-width: @mobile-cutoff) {
-    font-size: @mobile-font-size;
-    padding: 1vw;
-    float: left;
-    display: block;
-  }
-  font-size: 14px;
+  // @media only screen and (max-width: @mobile-cutoff) {
+  //   font-size: @mobile-font-size;
+  //   padding: 1vw;
+  //   float: left;
+  //   display: block;
+  // }
   padding-right: 5vw;
-  //padding: 2vmin;
-  padding: 0px;
-  float: right;
+  font-size: 1rem;
+  margin-left: auto;
+  width: min-content;
 }
 
 .MenuItem * {
@@ -42,10 +49,14 @@
 }
 
 .Logo {
-  margin-left: 5vw;
-  width: calc(3rem + 3vw);
-  height: calc(5rem + 1.5vw);
-  padding: 1rem;
+  @media only screen and (max-width: @mobile-cutoff) {
+    display: none;
+  }
+  margin-left: 1vw;
+  width: calc(2rem + 3vw);
+  height: calc(3rem + 1.5vw);
+  //padding: 1rem;
+  margin-right: auto;
   transition: all .2s ease-in-out;
 }
 

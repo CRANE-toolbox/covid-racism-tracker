@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Layout, Button } from 'antd';
+import { Row, Col, Button } from 'antd';
 import styles from '../styles/SupportPage.module.less';
 import { useHistory } from 'react-router-dom';
 import { Routes } from '../routes';
