@@ -1,12 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from '../styles/graphPreview.module.less';
 import useHover from '@react-hook/hover';
-import { ReactComponent as LineGraph } from '../assets/graph-line.svg';
-import { ReactComponent as FlowGraph } from '../assets/flow-graph.svg';
 import { COLORS } from '../styles/colors';
 import { Modal, Button } from 'antd';
-
-import { ReactComponent as CloseIcon } from '../assets/circle-close.svg';
+import { CircleClose, FlowGraphImg, LineGraphImg } from '../assets/assets.index';
 
 interface Props {
   title: string;
@@ -48,7 +45,7 @@ export const GraphPreview: React.FC<Props> = (props: Props) => {
         onCancel={closeModal}
         footer={null}
         children={ModalContent(props)}
-        closeIcon={<CloseIcon style={{ width: '2.5rem', height: '2.5rem', marginTop: '.75rem' }} />}
+        closeIcon={<CircleClose style={{ width: '2.5rem', height: '2.5rem', marginTop: '.75rem' }} />}
       />
       <div className={styles.Box} ref={target} onClick={openModal}>
         {isHovering ? RenderHoverState(props) : RenderRestingState(props)}
@@ -59,6 +56,7 @@ export const GraphPreview: React.FC<Props> = (props: Props) => {
 
 const ModalContent: React.FC<Props> = (props: Props) => {
   const { modalTitle, textContent, graph } = props;
+  useEffect(() => {}, []);
   return (
     <div className={styles.ModalContentWrapper}>
       <h1 className={styles.ModalTitle}>{modalTitle}</h1>
@@ -93,6 +91,6 @@ const RenderHoverState: React.FC<Props> = (props: Props) => {
 };
 
 export const GraphType = {
-  FLOW: FlowGraph,
-  LINE: LineGraph,
+  FLOW: FlowGraphImg,
+  LINE: LineGraphImg,
 } as const;

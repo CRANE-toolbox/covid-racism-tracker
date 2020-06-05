@@ -7,3 +7,9 @@ export const Routes = {
   PARTNERS: '/partners',
   ABOUT: '/about',
 } as const;
+
+export const ExternalRoutes = {
+  GITHUB: '/redirect/github',
+  DEVPOST: '/redirect/devpost',
+  EMAILUS: '/redirect/emailus',
+} as const;

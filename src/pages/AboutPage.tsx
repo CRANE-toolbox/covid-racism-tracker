@@ -1,15 +1,11 @@
 import React from 'react';
 import { Row, Col, Space } from 'antd';
 import styles from '../styles/AboutPage.module.less';
-import gProfile from '../assets/gianluca_profile.png';
 import testPrpfile from '../assets/logo192.png';
-import ianProfile from '../assets/ian_profile.jpg';
-import camProfile from '../assets/camelia_profile.jpg';
-import svetlanaProfile from '../assets/svetlana_profile.jpg';
-import rachaelProfile from '../assets/rachael_profile.jpg';
 import { ReactComponent as Distance } from '../assets/social_distancing.svg';
 import { UserProfile } from '../components/userProfile';
 import { MemberProfile } from '../components/teamMember';
+import { ianProfile, gianlucaProfile, cameliaProfile, rachaelProfile } from '../assets/assets.index';
 interface Props {}
 
 export const AboutPage: React.FC<Props> = () => {
@@ -63,7 +59,7 @@ export const AboutPage: React.FC<Props> = () => {
       </Row>
       <Row>
         <UserProfile
-          photo={gProfile}
+          photo={gianlucaProfile}
           name="Gianluca Stringhini"
           bio="Assistant Professor in the Department of Electrical and Computer Engineering at Boston University, co-directing the Security Lab (SeclaBU)"
           linkText="SEC Lab"
@@ -105,7 +101,7 @@ export const AboutPage: React.FC<Props> = () => {
             <MemberProfile name="Ian Saucy" position="Tech" bio="Ian still needs to write his bio.." photo={ianProfile} />
           </Col>
           <Col flex={1.66} className={styles.TeamProfileRow}>
-            <MemberProfile name="Camelia B" position="UI/UX" bio="This is a bio a longerlongerlonger bio you say yes this is a longer bioooooooooo" photo={camProfile} />
+            <MemberProfile name="Camelia B" position="UI/UX" bio="This is a bio a longerlongerlonger bio you say yes this is a longer bioooooooooo" photo={cameliaProfile} />
           </Col>
           <Col flex={1.66} className={styles.TeamProfileRow}>
             <MemberProfile

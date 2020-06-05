@@ -34,6 +34,31 @@ export const Main: React.FC<Props> = () => {
           <Route exact path="/support" component={SupportPage} />
           <Route exact path="/partners" component={PartnersPage} />
           <Route exact path="/about" component={AboutPage} />
+          <Route
+            exact
+            path="/redirect/github"
+            component={() => {
+              window.location.assign('https://github.com/CRANE-toolbox');
+              return null;
+            }}
+          />
+          <Route
+            exact
+            path="/redirect/devpost"
+            component={() => {
+              window.location.assign('https://devpost.com/software/crane-dvkeuf');
+              return null;
+            }}
+          />
+          <Route
+            exact
+            path="/redirect/emailus"
+            component={() => {
+              window.location.assign('mailto:someone@yoursite.com');
+              return null;
+            }}
+          />
+
           <Route path="/" component={Page404} />
         </Switch>
       </Layout.Content>

@@ -3,7 +3,8 @@ import { Row, Col, Layout, Button } from 'antd';
 import styles from '../styles/HomePage.module.less';
 import { TwitterCircleFilled, LinkedinFilled, MailFilled } from '@ant-design/icons';
 import { useHistory } from 'react-router-dom';
-import { Routes } from '../routes';
+import { Routes, ExternalRoutes } from '../routes';
+import { CircleEmail, DevPost, Github } from '../assets/assets.index';
 interface Props {}
 export const HomePage: React.FC<Props> = () => {
   let history = useHistory();
@@ -48,14 +49,14 @@ export const HomePage: React.FC<Props> = () => {
         </Col>
       </Row>
       <Row justify="center" className={styles.SocialIconsRow}>
-        <Col>
-          <TwitterCircleFilled className={styles.HomeSocialIcons} />
+        <Col className={styles.HomeSocialIcons}>
+          <CircleEmail onClick={() => history.push(ExternalRoutes.EMAILUS)} />
         </Col>
-        <Col>
-          <LinkedinFilled className={styles.HomeSocialIcons} />
+        <Col className={styles.HomeSocialIcons}>
+          <DevPost onClick={() => history.push(ExternalRoutes.DEVPOST, null)} />
         </Col>
-        <Col>
-          <MailFilled className={styles.HomeSocialIcons} />
+        <Col className={styles.HomeSocialIcons}>
+          <Github onClick={() => history.push(ExternalRoutes.GITHUB)} />
         </Col>
       </Row>
     </Layout.Content>
