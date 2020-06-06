@@ -73,6 +73,7 @@ export const SupportPage: React.FC<Props> = () => {
             title="VICTIM CONNECT"
             linkText="Learn More"
             link="https://victimconnect.org/learn/types-of-crime/hate-crimes/"
+            aria-label="Raised Fist Empowerment Icon"
           />
         </Col>
         <Col>
@@ -83,6 +84,7 @@ export const SupportPage: React.FC<Props> = () => {
             title="CAMPAIGN ZERO"
             linkText="Learn More"
             link="https://www.joincampaignzero.org/#vision"
+            aria-label="Raised Fist Empowerment Icon"
           />
         </Col>
         <Col>
@@ -93,6 +95,7 @@ export const SupportPage: React.FC<Props> = () => {
             title="ASIAN AMERICAN TOOLKIT"
             linkText="Learn More"
             link="https://www.asianamtoolkit.org/"
+            aria-label="Toolkit Icon"
           />
         </Col>
         <Col>
@@ -102,6 +105,7 @@ export const SupportPage: React.FC<Props> = () => {
             title="STAND AGAINST HATRED TRACKER"
             linkText="Learn More"
             link="https://www.standagainsthatred.org/"
+            aria-label="Graph Icon"
           />
         </Col>
         <Col>
@@ -112,6 +116,7 @@ export const SupportPage: React.FC<Props> = () => {
             title="AAPI EMERGENCY RESPONSE NETWORK"
             linkText="Learn More"
             link="https://www.aapiern.org/"
+            aria-label="First-Aid Kit Icon"
           />
         </Col>
       </Row>
@@ -160,6 +165,7 @@ export const SupportPage: React.FC<Props> = () => {
             has partnered with Asian Americans Advancing Justice (AAJC) to adapt their free bystander intervention and de-escalation training."
             title="BYSTANDER INTERVENTION TRAINING"
             linkText="Learn More"
+            aria-label="Hands Together Empowerment Icon"
           />
         </Col>
         <Col>
@@ -169,6 +175,7 @@ export const SupportPage: React.FC<Props> = () => {
             those facing harassment can easily report abuse across social networks and find support from others who know what they're going through "
             title="HEART MOB"
             linkText="Learn More"
+            aria-label="Hand with a heart Icon"
           />
         </Col>
         <Col>
@@ -178,6 +185,7 @@ export const SupportPage: React.FC<Props> = () => {
             we can help those being targeted. Stay informed! Safe Horizon outlines the dimensions of hate speech and what concerned supporters should know!"
             title="SAFE HORIZON"
             linkText="Learn More"
+            aria-label="Photo of the Horizon Icon"
           />
         </Col>
       </Row>
