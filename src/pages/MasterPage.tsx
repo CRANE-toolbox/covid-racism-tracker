@@ -21,7 +21,10 @@ function renderFooterHelper() {
     </Layout.Footer>
   );
 }
-
+/**
+ * This component represents the main part of the website. The header, footer, and content
+ * are rendered here. Plus, the react router lives here!
+ */
 export const Main: React.FC<Props> = () => {
   let location = useLocation();
   let history = useHistory();
@@ -31,6 +34,9 @@ export const Main: React.FC<Props> = () => {
         <Header />
       </Layout.Header>
       <Layout.Content className={styles.MasterContent}>
+        {/* We put a router directly here so that it only has to re-load the contents
+        of the page, not the entire thing! 
+         */}
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/data" component={DataPage} />

@@ -175,6 +175,12 @@ export const TopicLineChart = (props: props) => (
     curve="monotoneX"
     enablePointLabel={false}
     colors={({ id }) => {
+      /**
+       * Super ugly solution to render colors based on the keyword. Would be a good idea to abstract this
+       * out to something more general in the future.
+       *
+       * Todo: Refactor this into something more general
+       */
       if (id === 'Negative sentiment towards China/Chinese people' || id === 'China-related, including alternative names for covid19' || id === 'Linking China and Covid19') {
         return finalColorScheme[0];
       } else if (id === 'Mistrust, cover-up, and lies' || id === 'Opinion debates around medicine') {

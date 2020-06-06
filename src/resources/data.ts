@@ -1,3 +1,6 @@
+/**
+ * The file that contains all the data for the graphs. Each graphs pulls directly from this file
+ */
 export var dataSlurs = [
   {
     id: 'Chink',

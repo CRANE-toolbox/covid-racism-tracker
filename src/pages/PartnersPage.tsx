@@ -1,12 +1,11 @@
 import React from 'react';
-import { Row, Col, Layout, Button } from 'antd';
+import { Row, Col, Button } from 'antd';
 import styles from '../styles/PartnersPage.module.less';
 
 interface Props {}
 
 export const PartnersPage: React.FC<Props> = () => {
   return (
-
     <div className={styles.PageWrapper}>
       <Row>
         <Col span={24} className={styles.Title}>
@@ -16,7 +15,9 @@ export const PartnersPage: React.FC<Props> = () => {
       <Row>
         <Col span={24}>
           <body className={styles.SubTitleContent}>
-            <p><strong>What can you do with this data?</strong></p>
+            <p>
+              <strong>What can you do with this data?</strong>
+            </p>
             <p>
               There are many nonprofits and social impact enterprises in existence fighting to combat the spread of hate speech and provide support to those targeted. This data
               does more than provide evidence for sinophobic and xenophobic outbursts in response to the Coronavirus pandemic; it can help organizations see who is being directly

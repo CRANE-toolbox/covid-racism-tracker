@@ -8,8 +8,11 @@ import { ianProfile, gianlucaProfile, cameliaProfile, rachaelProfile, svetlanaPr
 import { useHistory } from 'react-router-dom';
 import { ExternalRoutes } from '../routes';
 interface Props {}
-
+/**
+ * The about page for the website. All items embedded statically
+ */
 export const AboutPage: React.FC<Props> = () => {
+  //We use this to be able to utilize the react router in this component
   let history = useHistory();
   return (
     <div className={styles.PageWrapper}>

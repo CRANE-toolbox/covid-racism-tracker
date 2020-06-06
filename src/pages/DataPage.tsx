@@ -27,6 +27,11 @@ import Modal from 'antd/lib/modal/Modal';
 
 interface Props {}
 
+/**
+ * This is a warning dialog that we display to the user if they're on an
+ * un-supported browser.
+ */
+
 const WarningModal = () => {
   const [isVisible, setVisible] = useState(true);
   return (
@@ -52,6 +57,9 @@ function setVisited() {
   localStorage['hasVisited'] = true;
 }
 
+/**
+ * Main content of this page
+ */
 export const DataPage: React.FC<Props> = () => {
   return (
     <div className={styles.PageWrapper}>
@@ -59,10 +67,10 @@ export const DataPage: React.FC<Props> = () => {
       {(!(isChrome || isChromium || isFirefox) || isMobile) && !hasVisited() ? <WarningModal /> : null}
       <h1>Frequency of Sinophobic Slurs on Twitter</h1>
       <body>
-        <p>Project CRANE computes the daily and weekly frequencies of several known sinophobic slurs in a dataset
-            representative of real-time Twitter data.</p>
-        <p><strong>Select a tile to view the analysis</strong></p>
-
+        <p>Project CRANE computes the daily and weekly frequencies of several known sinophobic slurs in a dataset representative of real-time Twitter data.</p>
+        <p>
+          <strong>Select a tile to view the analysis</strong>
+        </p>
       </body>
       <Row gutter={[65, 65]} className={styles.FreqRow}>
         <Col>
@@ -408,64 +416,61 @@ export const DataPage: React.FC<Props> = () => {
         </Col>
       </Row>
 
-
-      <div className={styles.PageWrapper}>
-        <Row>
-          <Col span={24} className={styles.Title}>
-            <h1>User Research Sample Q&A</h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col span={24}>
-            <div className={styles.UserResearchSection}>
-              <div className={styles.UserResearchSubsection}>
-                <p>
-                  Before designing this website, our team has conducted preliminary user research, specifically ethnographic interviews
-                  and online surveys, to gain a better understanding of the public’s perception of COVID-19 related hate speech, racism,
-                  and xenophobia/sinophobia. By reaching out to stakeholders, we ensured that our results will support anti-racist actions
-                  and provided them with the necessary contextual information. In addition to this, we have conducted user testing around
-                  accessibility issues, including but not limited to responsiveness, readability and color contrasts.
-                  </p>
-                  <p>Below are examples of anonymous testimonials we collected during our interviews!</p>
-              </div>
-              <div className={styles.UserResearchSubsection}>
-                <p>
-                  <strong>Q: How has COVID-19 made an impact in your life? (This can be regarding anything: education, earnings,
-                  living, mental health, how you spend your day, etc.)</strong>
-                </p>
-                <p>
-                  A: Disconnect from physical expressions of love for family and friends, loss of spontaneity, loss of
-                  community wide entertainment, the virus has victimized us; physically, financially, socially, emotionally,
-                   and spiritually.
-                </p>
-              </div>
-              <div className={styles.UserResearchSubsection}>
-                <p>
-                  <strong>Q: Have you seen individuals be targeted based on their identity with the rise of the pandemic? If so,
-                  if you are comfortable doing so, can you indicate to what extent targeting has had on these individuals?</strong>
-                </p>
-                <p>
-                  A: I have not witnessed this personally, but I live in a fairly homogeneous community. I can see and grieve
-                  for the additional burden on black men, in particular, for wearing masks. I can see “essential workers”
-                   are expected to turn up at low paying, high risk jobs -- many of these are people of color.
-                </p>
-              </div>
-              <div className={styles.UserResearchSubsection}>
-                <p>
-                  <strong>Q: If there were a webpage to document the spread of racist rhetoric related to the COVID-19 pandemic,
-                   what characteristics do you think would be needed in order for the tool to be beneficial/purposeful?</strong>
-                </p>
-                <p>
-                  A: If there’s a pattern of misassigned blame, correcting that factually is useful. Other than that,
-                  sites that already track hate could include COVID-19 considerations
-                </p>
-              </div>
+      <Row className={styles.UserResearchWrapper}>
+        <Col span={24} className={styles.Title}>
+          <h1>User Research Sample Q&A</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={24}>
+          <div className={styles.UserResearchSection}>
+            <div className={styles.UserResearchSubsection}>
+              <p>
+                Before designing this website, our team has conducted preliminary user research, specifically ethnographic interviews and online surveys, to gain a better
+                understanding of the public’s perception of COVID-19 related hate speech, racism, and xenophobia/sinophobia. By reaching out to stakeholders, we ensured that our
+                results will support anti-racist actions and provided them with the necessary contextual information. In addition to this, we have conducted user testing around
+                accessibility issues, including but not limited to responsiveness, readability and color contrasts.
+              </p>
+              <p>Below are examples of anonymous testimonials we collected during our interviews!</p>
             </div>
-          </Col>
-        </Row>
-      </div>
-
+            <div className={styles.UserResearchSubsection}>
+              <p>
+                <strong>
+                  Q: How has COVID-19 made an impact in your life? (This can be regarding anything: education, earnings, living, mental health, how you spend your day, etc.)
+                </strong>
+              </p>
+              <p>
+                A: Disconnect from physical expressions of love for family and friends, loss of spontaneity, loss of community wide entertainment, the virus has victimized us;
+                physically, financially, socially, emotionally, and spiritually.
+              </p>
+            </div>
+            <div className={styles.UserResearchSubsection}>
+              <p>
+                <strong>
+                  Q: Have you seen individuals be targeted based on their identity with the rise of the pandemic? If so, if you are comfortable doing so, can you indicate to what
+                  extent targeting has had on these individuals?
+                </strong>
+              </p>
+              <p>
+                A: I have not witnessed this personally, but I live in a fairly homogeneous community. I can see and grieve for the additional burden on black men, in particular,
+                for wearing masks. I can see “essential workers” are expected to turn up at low paying, high risk jobs -- many of these are people of color.
+              </p>
+            </div>
+            <div className={styles.UserResearchSubsection}>
+              <p>
+                <strong>
+                  Q: If there were a webpage to document the spread of racist rhetoric related to the COVID-19 pandemic, what characteristics do you think would be needed in order
+                  for the tool to be beneficial/purposeful?
+                </strong>
+              </p>
+              <p>
+                A: If there’s a pattern of misassigned blame, correcting that factually is useful. Other than that, sites that already track hate could include COVID-19
+                considerations
+              </p>
+            </div>
+          </div>
+        </Col>
+      </Row>
     </div>
-
   );
 };
