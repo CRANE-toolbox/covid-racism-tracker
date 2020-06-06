@@ -1,3 +1,8 @@
+/**
+ * Our color pallet usable globally around the application without having to remember
+ * hex color codes
+ */
+
 export enum COLORS {
   pink = '#E71E62',
   light_purple = '#C8C5FD',

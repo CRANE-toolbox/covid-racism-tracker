@@ -18,7 +18,11 @@ interface Props {
   downloadLink?: string;
   displayCTA?: boolean;
 }
-
+/**
+ * This ia component to render the graph preview squares and the on click
+ * create a modal that displays the graph. It uses a combination of CSS and states to
+ * accomplish this task and render correctly.
+ */
 export const GraphPreview: React.FC<Props> = (props: Props) => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const target = React.useRef(null);
@@ -49,6 +53,9 @@ export const GraphPreview: React.FC<Props> = (props: Props) => {
   );
 };
 
+/**
+ * Helper component to render the content of the modal
+ */
 const ModalContent: React.FC<Props> = (props: Props) => {
   const { modalTitle, textContent, graph, displayCTA } = props;
   let history = useHistory();
@@ -57,6 +64,7 @@ const ModalContent: React.FC<Props> = (props: Props) => {
       <h1 className={styles.ModalTitle}>{modalTitle}</h1>
       {graph}
       <body>{textContent}</body>
+      {/* Conditionally render the CTA depending on the passed props */}
       {displayCTA ? (
         <Button
           className={styles.ActionButton}
@@ -70,7 +78,9 @@ const ModalContent: React.FC<Props> = (props: Props) => {
     </div>
   );
 };
-
+/**
+ * This is the resting state of the component, not hovered, not clicked
+ */
 const RenderRestingState: React.FC<Props> = (props: Props) => {
   const { title, GraphicType } = props;
   return (
@@ -78,11 +88,15 @@ const RenderRestingState: React.FC<Props> = (props: Props) => {
       <div className={styles.Title} style={{}}>
         {title}
       </div>
+      {/* Check for the existence of a graph type, this enables the user to remove the example graph from the component */}
       {GraphicType ? <GraphicType className={styles.SVGPrev} /> : null}
     </div>
   );
 };
 
+/**
+ * Render the component on hover, displays using a different background and text
+ */
 const RenderHoverState: React.FC<Props> = (props: Props) => {
   const { hoverText, hoverColor } = props;
   const style = {
@@ -96,6 +110,9 @@ const RenderHoverState: React.FC<Props> = (props: Props) => {
   );
 };
 
+/**
+ * The types of graphs on the component that are supported.
+ */
 export const GraphType = {
   FLOW: FlowGraphImg,
   LINE: LineGraphImg,

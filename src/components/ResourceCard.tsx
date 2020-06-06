@@ -23,6 +23,9 @@ export const ResourceCard: React.FC<Props> = (props: Props) => {
   );
 };
 
+/**
+ * These are the icons types that can be used by this component.
+ */
 export const CardIcon = {
   FIRSTAID: FirstAidImg,
   FIST: FistImg,
