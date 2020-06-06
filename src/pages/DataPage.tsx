@@ -90,6 +90,7 @@ export const DataPage: React.FC<Props> = () => {
             }
             hoverColor={COLORS.dark_blue}
             hoverText="Daily frequencies of sinophobic slurs"
+            aria-label="Graph of Daily frequencies of sinophobic slurs (November 2019 to April 2020)"
           />
         </Col>
         <Col>
@@ -109,6 +110,7 @@ export const DataPage: React.FC<Props> = () => {
             }
             hoverColor={COLORS.dark_blue}
             hoverText="Weekly frequencies of sinophobic slurs"
+            aria-label="Graph of Weekly frequencies of sinophobic slurs (November 2019 to April 2020)"
           />
         </Col>
         <Col>
@@ -121,6 +123,7 @@ export const DataPage: React.FC<Props> = () => {
             }
             hoverColor={COLORS.light_green}
             hoverText="More on research methods"
+            aria-label="More on research methods: How is CRANE computing the frequency of sinophobic slurs?"
           />
         </Col>
       </Row>
@@ -142,7 +145,7 @@ export const DataPage: React.FC<Props> = () => {
                 centerTitle={true}
                 label={
                   <div>
-                    Topic appearing linked to <i>Virus</i> (Nov 2019 - Apr 2020)
+                    Topics appearing linked to <i>Virus</i> (Nov 2019 - Apr 2020)
                   </div>
                 }
               />
@@ -151,7 +154,8 @@ export const DataPage: React.FC<Props> = () => {
               'Using a word embedding algorithm, the forty words closest to Virus during each month were extracted. They were topic coded by our team and this graph show the evolution in volume and ranking of each topic over time.'
             }
             hoverColor={COLORS.light_violet}
-            hoverText="Topic appearing linked to Virus"
+            hoverText="Topics appearing linked to Virus"
+            aria-label="Graph of Topics appearing linked to Virus (Nov 2019 - Apr 2020)"
           />
         </Col>
         <Col>
@@ -165,7 +169,7 @@ export const DataPage: React.FC<Props> = () => {
                 centerTitle={true}
                 label={
                   <div>
-                    Topic appearing linked to <i>Covid</i> (Feb - Apr 2020)
+                    Topics appearing linked to <i>Covid</i> (Feb - Apr 2020)
                   </div>
                 }
               />
@@ -174,7 +178,8 @@ export const DataPage: React.FC<Props> = () => {
               'Using a word embedding algorithm, the forty words closest to Covid during each month were extracted. They were topic coded by our team and this graph show the evolution in volume and ranking of each topic over time.'
             }
             hoverColor={COLORS.light_violet}
-            hoverText="Topic appearing linked to Covid"
+            hoverText="Topics appearing linked to Covid"
+            aria-label="Graph of Topics appearing linked to Covid (Feb - Apr 2020)"
           />
         </Col>
         <Col>
@@ -188,7 +193,7 @@ export const DataPage: React.FC<Props> = () => {
                 centerTitle={true}
                 label={
                   <div>
-                    Topic appearing linked to <i>Wuflu</i> (Jan - Apr 2020)
+                    Topics appearing linked to <i>Wuflu</i> (Jan - Apr 2020)
                   </div>
                 }
               />
@@ -197,7 +202,8 @@ export const DataPage: React.FC<Props> = () => {
               'Using a word embedding algorithm, the forty words closest to Wuflu during each month were extracted. They were topic coded by our team and this graph show the evolution in volume and ranking of each topic over time.'
             }
             hoverColor={COLORS.light_violet}
-            hoverText="Topic appearing linked to Wuflu"
+            hoverText="Topics appearing linked to Wuflu"
+            aria-label="Graph of Topics appearing linked to Wuflu (Jan - Apr 2020)"
           />
         </Col>
         <Col>
@@ -211,7 +217,7 @@ export const DataPage: React.FC<Props> = () => {
                 centerTitle={true}
                 label={
                   <div>
-                    Topic appearing linked to <i>Kungflu</i> (Mar - Apr 2020)
+                    Topics appearing linked to <i>Kungflu</i> (Mar - Apr 2020)
                   </div>
                 }
               />
@@ -220,7 +226,8 @@ export const DataPage: React.FC<Props> = () => {
               'Using a word embedding algorithm, the forty words closest to Kungflu during each month were extracted. They were topic coded by our team and this graph show the evolution in volume and ranking of each topic over time.'
             }
             hoverColor={COLORS.light_violet}
-            hoverText="Topic appearing linked to Kungflu"
+            hoverText="Topics appearing linked to Kungflu"
+            aria-label="Graph of Topics appearing linked to Kungflu (Mar - Apr 2020)"
           />
         </Col>
         <Col>
@@ -234,7 +241,7 @@ export const DataPage: React.FC<Props> = () => {
                 centerTitle={true}
                 label={
                   <div>
-                    Topic appearing linked to <i>China</i> (Nov 2019 - Apr 2020)
+                    Topics appearing linked to <i>China</i> (Nov 2019 - Apr 2020)
                   </div>
                 }
               />
@@ -243,7 +250,8 @@ export const DataPage: React.FC<Props> = () => {
               'Using a word embedding algorithm, the forty words closest to China during each month were extracted. They were topic coded by our team and this graph show the evolution in volume and ranking of each topic over time.'
             }
             hoverColor={COLORS.light_violet}
-            hoverText="Topic appearing linked to China"
+            hoverText="Topics appearing linked to China"
+            aria-label="Graph of Topics appearing linked to China (Nov 2019 - Apr 2020)"
           />
         </Col>
         <Col>
@@ -257,7 +265,7 @@ export const DataPage: React.FC<Props> = () => {
                 centerTitle={true}
                 label={
                   <div>
-                    Topic appearing linked to <i>Chinese</i> (Nov 2019 - Apr 2020)
+                    Topics appearing linked to <i>Chinese</i> (Nov 2019 - Apr 2020)
                   </div>
                 }
               />
@@ -266,7 +274,8 @@ export const DataPage: React.FC<Props> = () => {
               'Using a word embedding algorithm, the forty words closest to Chinese during each month were extracted. They were topic coded by our team and this graph show the evolution in volume and ranking of each topic over time.'
             }
             hoverColor={COLORS.light_violet}
-            hoverText="Topic appearing linked to Chinese"
+            hoverText="Topics appearing linked to Chinese"
+            aria-label="Graph of Topics appearing linked to Chinese (Nov 2019 - Apr 2020)"
           />
         </Col>
         <Col>
@@ -280,7 +289,7 @@ export const DataPage: React.FC<Props> = () => {
                 centerTitle={true}
                 label={
                   <div>
-                    Topic appearing linked to <i>Wuhan</i> (Nov 2019 - Apr 2020)
+                    Topics appearing linked to <i>Wuhan</i> (Nov 2019 - Apr 2020)
                   </div>
                 }
               />
@@ -289,7 +298,8 @@ export const DataPage: React.FC<Props> = () => {
               'Using a word embedding algorithm, the forty words closest to Wuhan during each month were extracted. They were topic coded by our team and this graph show the evolution in volume and ranking of each topic over time.'
             }
             hoverColor={COLORS.light_violet}
-            hoverText="Topic appearing linked to Wuhan"
+            hoverText="Topics appearing linked to Wuhan"
+            aria-label="Graph of Topics appearing linked to Wuhan (Nov 2019 - Apr 2020)"
           />
         </Col>
         <Col>
@@ -303,7 +313,7 @@ export const DataPage: React.FC<Props> = () => {
                 centerTitle={true}
                 label={
                   <div>
-                    Topic appearing linked to <i>Coronavirus</i> (Jan - Apr 2020)
+                    Topics appearing linked to <i>Coronavirus</i> (Jan - Apr 2020)
                   </div>
                 }
               />
@@ -312,7 +322,8 @@ export const DataPage: React.FC<Props> = () => {
               'Using a word embedding algorithm, the forty words closest to Coronavirus during each month were extracted. They were topic coded by our team and this graph show the evolution in volume and ranking of each topic over time.'
             }
             hoverColor={COLORS.light_violet}
-            hoverText="Topic appearing linked to Coronavirus"
+            hoverText="Topics appearing linked to Coronavirus"
+            aria-label="Graph of Topics appearing linked to Coronavirus (Jan - Apr 2020)"
           />
         </Col>
         <Col>
@@ -326,7 +337,7 @@ export const DataPage: React.FC<Props> = () => {
                 centerTitle={true}
                 label={
                   <div>
-                    Topic appearing linked to <i>Infecting</i> (Nov 2019 - Apr 2020)
+                    Topics appearing linked to <i>Infecting</i> (Nov 2019 - Apr 2020)
                   </div>
                 }
               />
@@ -335,7 +346,8 @@ export const DataPage: React.FC<Props> = () => {
               'Using a word embedding algorithm, the forty words closest to Infecting during each month were extracted. They were topic coded by our team and this graph show the evolution in volume and ranking of each topic over time.'
             }
             hoverColor={COLORS.light_violet}
-            hoverText="Topic appearing linked to Infecting"
+            hoverText="Topics appearing linked to Infecting"
+            aria-label="Graph of Topics appearing linked to Infecting (Nov 2019 - Apr 2020)"
           />
         </Col>
         <Col>
@@ -349,14 +361,15 @@ export const DataPage: React.FC<Props> = () => {
                 centerTitle={true}
                 label={
                   <div>
-                    Topic appearing linked to <i>China</i>, <i>Chinese</i>, or <i>Wuhan</i> (Nov 2019 - Apr 2020)
+                    Topics appearing linked to <i>China</i>, <i>Chinese</i>, or <i>Wuhan</i> (Nov 2019 - Apr 2020)
                   </div>
                 }
               />
             }
             textContent={'This graph shows the aggregate of the topics found through word embedding, linked to China-related keywords: China, Chinese, or Wuhan.'}
             hoverColor={COLORS.dark_blue}
-            hoverText="Topic appearing linked to China, Chinese, or Wuhan"
+            hoverText="Topics appearing linked to China, Chinese, or Wuhan"
+            aria-label="Graph of Topics appearing linked to China, Chinse, or Wuhan (Nov 2019 - Apr 2020)"
           />
         </Col>
         <Col>
@@ -370,14 +383,15 @@ export const DataPage: React.FC<Props> = () => {
                 centerTitle={true}
                 label={
                   <div>
-                    Topic appearing linked to <i>Wuflu</i> or <i>Kunflu</i> (Jan - Apr 2020)
+                    Topics appearing linked to <i>Wuflu</i> or <i>Kunflu</i> (Jan - Apr 2020)
                   </div>
                 }
               />
             }
             textContent={'This graph shows the aggregate of the topics found through word embedding, linked to sinophobic alternative names to Covid19: Wuflu or Kungflu.'}
             hoverColor={COLORS.dark_blue}
-            hoverText="Topic appearing linked to Wuflu or Kunflu"
+            hoverText="Topics appearing linked to Wuflu or Kungflu"
+            aria-label="Graph of Topics appearing linked to Wuflu or Kungfly (Jan - Apr 2020)"
           />
         </Col>
         <Col>
@@ -389,6 +403,7 @@ export const DataPage: React.FC<Props> = () => {
             }
             hoverColor={COLORS.violet}
             hoverText="Newly identified slurs"
+            aria-label="Description/Discussion of Newly identified slurs, linked to Chink and Chinaman"
           />
         </Col>
         <Col>
@@ -400,6 +415,7 @@ export const DataPage: React.FC<Props> = () => {
             }
             hoverColor={COLORS.orange}
             hoverText="Keywords not linked to sinophobic topics"
+            aria-label="Description/Discussion of Negative Results: Keywords not linked to sinophobic topics"
           />
         </Col>
         <Col>
@@ -412,6 +428,7 @@ export const DataPage: React.FC<Props> = () => {
             }
             hoverColor={COLORS.light_green}
             hoverText="More on research methods"
+            aria-label="Description/Discussion of How is CRANE computing evolution of topics linked to specific keywords?"
           />
         </Col>
       </Row>

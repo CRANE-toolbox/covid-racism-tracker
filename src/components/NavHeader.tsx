@@ -17,7 +17,7 @@ export const Header: React.FC<Props> = () => {
   const breakpoint = 800;
   return (
     <div className={styles.MenuWrap}>
-      <Logo className={styles.Logo} onClick={() => history.push(Routes.HOME.path)} />
+      <Logo className={styles.Logo} onClick={() => history.push(Routes.HOME.path)} aria-label="Blue CRANE logo" />
       {width < breakpoint ? (
         <div style={{ margin: '0 auto' }}>
           <RenderMobileMenu />
