@@ -43,7 +43,7 @@ export const AboutPage: React.FC<Props> = () => {
           </body>
         </Col>
         <Col sm={24} md={12} lg={8}>
-          <Distance className={styles.SocialDistanceGraphic} aria-label="Social Distance Graphic of 3 individuals outdoors with face masks"/>
+          <Distance className={styles.SocialDistanceGraphic} aria-label="Social Distance Graphic of 3 individuals outdoors with face masks" />
         </Col>
       </Row>
       <Row>
@@ -113,28 +113,63 @@ export const AboutPage: React.FC<Props> = () => {
       <div style={{ margin: '0 auto', textAlign: 'center' }}>
         <Row gutter={[25, 25]}>
           <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
-            <MemberProfile name="Ian Saucy" position="Tech" bio="Ian still needs to write his bio.." photo={ianProfile} aria-label="Ian Saucy Profile Photo" />
+            <MemberProfile
+              name="Ian Saucy"
+              position="Web Design and Data analysis"
+              bio="Aspiring Software Engineer with an interest in linguistics, NLP and ML"
+              photo={ianProfile}
+              aria-label="Ian Saucy Profile Photo"
+            />
           </Col>
           <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
-            <MemberProfile name="Camelia B" position="UI/UX" bio="Worked on UX Research, Branding and Logo Design, Content Copy" photo={cameliaProfile} aria-label="Camelia B Profile Photo" />
+            <MemberProfile
+              name="Camelia B"
+              position="UI/UX"
+              bio="Worked on UX Research, Branding and Logo Design, Content Copy"
+              photo={cameliaProfile}
+              aria-label="Camelia B Profile Photo"
+            />
           </Col>
           <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
-            <MemberProfile name="Rachael Dier" position="UX Researcher/Designer" bio="I worked on and oversaw UX/UI research and design" photo={rachaelProfile} aria-label="Rachael Dier Profile Photo"/>
-          </Col>
-
-          <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
-            <MemberProfile name="Svetlana M" position="UI/UX" bio="Passionate about learning & teaching, UX UI designer, linguist and  copywriter" photo={svetlanaProfile} aria-label="Svetlana M Profile Photo"/>
-          </Col>
-          <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
-            <MemberProfile name="Lina Hayek" position="Design Consultant" bio="Design & Communication Strategy" photo={linaProfile} aria-label="Lina Hayek Profile Photo"/>
+            <MemberProfile
+              name="Rachael Dier"
+              position="UX Researcher/Designer"
+              bio="I worked on and oversaw UX/UI research and design"
+              photo={rachaelProfile}
+              aria-label="Rachael Dier Profile Photo"
+            />
           </Col>
 
           <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
             <MemberProfile
-              name="Kelly Ly" position="Undergraduate Programmer & Researcher" bio="I worked on data collection, data analysis, website styling, and video editing" photo={kellyProfile} aria-label="Kelly Ly Profile Photo" />
+              name="Svetlana M"
+              position="UI/UX"
+              bio="Passionate about learning & teaching, UX UI designer, linguist and  copywriter"
+              photo={svetlanaProfile}
+              aria-label="Svetlana M Profile Photo"
+            />
           </Col>
           <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
-            <MemberProfile name="Emma Barme" position="Computer Science Research & Implementation" bio="Literature review, data preprocessing, quantitative and qualitative analysis" photo={emmaProfile} aria-label="Emma Barme Profile Photo" />
+            <MemberProfile name="Lina Hayek" position="Design Consultant" bio="Design & Communication Strategy" photo={linaProfile} aria-label="Lina Hayek Profile Photo" />
+          </Col>
+
+          <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
+            <MemberProfile
+              name="Kelly Ly"
+              position="Undergraduate Programmer & Researcher"
+              bio="I worked on data collection, data analysis, website styling, and video editing"
+              photo={kellyProfile}
+              aria-label="Kelly Ly Profile Photo"
+            />
+          </Col>
+          <Col flex={1.66} className={styles.TeamProfileRow} order={randProfileOrder()}>
+            <MemberProfile
+              name="Emma Barme"
+              position="Computer Science Research & Implementation"
+              bio="Literature review, data preprocessing, quantitative and qualitative analysis"
+              photo={emmaProfile}
+              aria-label="Emma Barme Profile Photo"
+            />
           </Col>
         </Row>
       </div>
