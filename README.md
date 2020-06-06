@@ -52,3 +52,4 @@ This projected was created with `create-react-app` with a typescript template. I
 
 ---
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Icons made by Freepik from [Flaticon](www.flaticon.com)
