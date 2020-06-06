@@ -1,3 +1,7 @@
+# CRANE (Crisis Racism And Narrative Evaluation)
+
+![CRANE thumbnail](https://github.com/CRANE-toolbox/covid-racism-tracker/blob/master/thumbnail.jpg?raw=true)
+
 ## Code Overview
 
 The "main" of this CRA is in App.tsx(even though this actually called on index.tsx you should not touch that one). `App.tsx` can either have a bunch of react components and JSX(like it does right now) or expert one or more react components that then handle the more specific parts of code.
