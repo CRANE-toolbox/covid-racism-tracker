@@ -412,12 +412,22 @@ export const DataPage: React.FC<Props> = () => {
       <div className={styles.PageWrapper}>
         <Row>
           <Col span={24} className={styles.Title}>
-            <h1>User Research</h1>
+            <h1>User Research Sample Q&A</h1>
           </Col>
         </Row>
         <Row>
           <Col span={24}>
             <div className={styles.UserResearchSection}>
+              <div className={styles.UserResearchSubsection}>
+                <p>
+                  Before designing this website, our team has conducted preliminary user research, specifically ethnographic interviews
+                  and online surveys, to gain a better understanding of the public’s perception of COVID-19 related hate speech, racism,
+                  and xenophobia/sinophobia. By reaching out to stakeholders, we ensured that our results will support anti-racist actions
+                  and provided them with the necessary contextual information. In addition to this, we have conducted user testing around
+                  accessibility issues, including but not limited to responsiveness, readability and color contrasts.
+                  </p>
+                  <p>Below are examples of anonymous testimonials we collected during our interviews!</p>
+              </div>
               <div className={styles.UserResearchSubsection}>
                 <p>
                   <strong>Q: How has COVID-19 made an impact in your life? (This can be regarding anything: education, earnings,
