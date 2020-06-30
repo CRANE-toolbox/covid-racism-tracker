@@ -10,11 +10,21 @@ jobs:
     name: Deploy
     steps:
       - uses: actions/checkout@v2
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Build Site
         run: 'npm install && npm run build'
         env:
           CI: false
-      - name: Publish
-        uses: cloudflare/wrangler-action@1.1.0
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
+          external_repository: crane-toolbox/crane-toolbox.github.io
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./build
+          publish_branch: "master"

@@ -2,6 +2,7 @@
   "name": "crane-web",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://crane-toolbox.github.io",
   "dependencies": {
     "@ant-design/icons": "^4.2.0",
     "@nivo/bump": "^0.61.1",
