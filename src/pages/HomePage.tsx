@@ -10,6 +10,15 @@ export const HomePage: React.FC<Props> = () => {
   return (
     <Layout.Content>
       <Row justify="center">
+        <Col className={styles.HomePageBanner}>
+          <p className={styles.HomePageBannerContent}>
+            This website was created as part of the <a href="https://theresiliencychallenge.devpost.com/">Resiliency Challenge hackathon.</a> The data analyses presented here are
+            an example use-case for the <a href="">CRANE Python package</a> we are developing as a continuation to the Resiliency challenge. Please visit our
+            <a href="https://github.com/CRANE-toolbox"> Github repository</a> for more information.
+          </p>
+        </Col>
+      </Row>
+      <Row justify="center">
         <Col className={styles.HomePageColumnContent}>
           <h1 className={styles.h1}>Tracking Racism Around COVID-19 on Twitter</h1>
         </Col>
