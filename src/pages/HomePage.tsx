@@ -58,9 +58,7 @@ export const HomePage: React.FC<Props> = () => {
       <div style={{ paddingTop: '3rem' }} />
       <Row justify="center" className={styles.SocialIconsRow}>
         <Col className={styles.HomeSocialIcons}>
-          <a className={styles.HomeSocialIcons} href="https://forms.gle/fPnisqH8j5PgeLpH6" target="_blank" rel="noopener noreferrer">
-            <CircleEmail />
-          </a>
+          <CircleEmail onClick={() => history.push(ExternalRoutes.EMAILUS, null)} />
         </Col>
         <Col className={styles.HomeSocialIcons}>
           <DevPost onClick={() => history.push(ExternalRoutes.DEVPOST, null)} />

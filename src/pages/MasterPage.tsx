@@ -65,7 +65,7 @@ export const Main: React.FC<Props> = () => {
             exact
             path="/redirect/emailus"
             component={() => {
-              window.open('mailto:someone@yoursite.com');
+              window.open('https://forms.gle/fPnisqH8j5PgeLpH6');
               history.goBack();
               return null;
             }}
