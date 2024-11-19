@@ -23,7 +23,7 @@
     "create-react-class": "^15.6.3",
     "csstype": "^2.6.10",
     "customize-cra": "^1.0.0-alpha.0",
-    "firebase": "^7.14.2",
+    "firebase": "^10.9.0",
     "rcolor": "^2.0.2",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
